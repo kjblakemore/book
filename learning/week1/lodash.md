@@ -6,13 +6,15 @@ It can make you very productive and effective in writing Javascript programs.
 Read Lodash's page on npm [here](https://www.npmjs.com/package/lodash). How many times
 was it downloaded just last week alone?
 
+It was downloadeed 4,326,487 times.
+
 ## Examples
 
 ### Array of numbers
 
 {% set data = [1,2,3,4,5] %}
 
-Let's create a data array withthe contents: {{data}}. This array has {{ data.length }} items.
+Let's create a data array with the contents: {{data}}. This array has {{ data.length }} items.
 
 To get the first item, we can use lodash's [_.first](https://lodash.com/docs#first).
 
@@ -84,20 +86,18 @@ The data is
 ### Q: What are the ages of these people?
 
 {% lodash %}
-// replace this code with your solution that uses lodash
-var result = [45, 32, 54, 12]
-return result
+ages = _.pluck(data, 'age')
+return ages
 {% endlodash %}
 
-The names are {{ result }}
+The ages are {{ result }}
+
 
 ### Q. What is the youngest age?
 
 {% lodash %}
-// replace this code with your solution that uses lodash
-// hint: use _.pluck and _.min
-var result = 12
-return result
+min_age = _.min(ages)
+return min_age
 {% endlodash %}
 
 The youngest age is {{ result }}.
@@ -105,9 +105,7 @@ The youngest age is {{ result }}.
 ### Q. What is the oldest age?
 
 {% lodash %}
-// replace this code with your solution that uses lodash
-var result = 54
-return result
+return _.max(ages)
 {% endlodash %}
 
 The oldest age is {{ result }}.
@@ -115,10 +113,7 @@ The oldest age is {{ result }}.
 ### Q. Who is the youngest person?
 
 {% lodash %}
-// replace this code with your solution that uses lodash
-// hint: use your previous solution with _.find
-var result = data[3]
-return result
+return _.find(data, {age: min_age})
 {% endlodash %}
 
 The youngest person is {{ result.name }}.

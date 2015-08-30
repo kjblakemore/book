@@ -38,9 +38,15 @@ Now it's your team's turn to work together to complete the challenges below.
 Draw negative numbers in red and positive numbers in green.
 
 {% set numbers = [43,21,-13,32,20,5,-8,29,9] %}
+<ul>
 {% for number in numbers %}
-<li>{{number}}</li>
+    {% if number > 0 %}
+        <li> <font color="green"> {{number}}  </font></li>
+    {% else %}
+        <li> <font color="red"> {{number}} </font></li>
+    {% endif %}
 {% endfor %}
+</ul>
 
 (Hint: use the [if tag](https://mozilla.github.io/nunjucks/templating.html#if))
 
@@ -53,7 +59,7 @@ Draw negative numbers in red and positive numbers in green.
 
 <svg width="500" height="200">
 {% for number in numbers %}
-    <rect x="{{loop.index * 20}}" width="20" height="100" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+    <rect x="{{loop.index * 30}}" width="20" height="{{number * 3}}" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
 {% endfor %}
 </svg>
 
@@ -63,9 +69,9 @@ Draw negative numbers in red and positive numbers in green.
 
 * Same as the previous, but bars are horizontal.
 
-<svg width="500" height="200">
+<svg width="500" height="300">
 {% for number in numbers %}
-    <rect y="{{loop.index * 20}}" width="100" height="20" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+    <rect y="{{loop.index * 30}}" width="{{number * 3}}" height="20" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
 {% endfor %}
 </svg>
 
@@ -82,7 +88,7 @@ Draw negative numbers in red and positive numbers in green.
     {% for rows in data %}
         <tr>
             <!-- Add your code here  -->
-            <td>10</td><td>15</td>
+            <td>{{rows[0]}}</td><td>{{rows[1]}}</td>
         </tr>
     {% endfor %}
 </table>
@@ -90,26 +96,28 @@ Draw negative numbers in red and positive numbers in green.
 
 ### X-Y Plot
 
-{% set data = [[10,15],[20,12],[31,42],[12,52],[33,24]]%}
+{% set data = [[10,15],[20,12],[31,42],[12,52],[33,24]] %}
+{% set scaled_data = [[30+186.4,45],[60+186.4,36],[93+186.4,126],[36+186.4,156],[99+186.4,72]] %}
 
 * Plot the data using `<circle>` to represent each data point.
 * Scale the data to nicely occupy the display area
 
 <svg width="500" height="200" style="border:1px solid grey">
-{% for point in data %}
+{% for point in scaled_data %}
     <circle cx="{{point[0]}}" cy="{{point[1]}}" r="2" stroke="black" stroke-width="3" fill="red" />
 {% endfor %}
 </svg>
 
 ### X-Y Plot (Colored)
 
-{% set data = [[10,15,4],[20,12,2],[31,42,6],[12,52,1],[33,24,6]]%}
+{% set data = [[10,15,4],[20,12,2],[31,42,6],[12,52,1],[33,24,6]] %}
+{% set scaled_data = [[30+186.4,45,4],[60+186.4,36,2],[93+186.4,126,6],[36+186.4,156,1],[99+186.4,72,6]] %}
 
 Now each data point has three values. Extend the previous solution. Use _size_
 of the circle to represent the third value.
 
 <svg width="500" height="200" style="border:1px solid grey">
-{% for point in data %}
-    <circle cx="{{point[0]}}" cy="{{point[1]}}" r="2" stroke="black" stroke-width="3" fill="red" />
+{% for point in scaled_data %}
+    <circle cx="{{point[0]}}" cy="{{point[1]}}" r="{{point[2]}}" stroke="black" stroke-width="3" fill="red" />
 {% endfor %}
 </svg>
