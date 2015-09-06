@@ -5,7 +5,7 @@
         <!-- head:start -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Method | book</title>
+        <title>Analysis | book</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.2.0">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../../hackathons/tinker/report.html" />
+    <link rel="next" href="../../hackathons/classmates/report.html" />
     
     
-    <link rel="prev" href="../../hackathons/tinker/index.html" />
+    <link rel="prev" href="../../hackathons/classmates/warmup.html" />
     
 
         <!-- head:end -->
@@ -48,7 +48,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="2.1.1" data-basepath="../.." data-revision="Sun Sep 06 2015 12:03:25 GMT-0600 (MDT)">
+    <div class="book" data-level="2.2.3" data-basepath="../.." data-revision="Sun Sep 06 2015 12:03:25 GMT-0600 (MDT)">
     
 
 <div class="book-summary">
@@ -299,7 +299,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="2.1.1" data-path="hackathons/tinker/method.html">
+        <li class="chapter " data-level="2.1.1" data-path="hackathons/tinker/method.html">
             
                 
                     <a href="../../hackathons/tinker/method.html">
@@ -380,7 +380,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.3" data-path="hackathons/classmates/analysis.html">
+        <li class="chapter active" data-level="2.2.3" data-path="hackathons/classmates/analysis.html">
             
                 
                     <a href="../../hackathons/classmates/analysis.html">
@@ -525,18 +525,69 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="method">Method</h1>
-<p>The main question is too general and too vague. As a class, we brainstormed and came up with a list of specific questions that are easier to tackle while useful for making the decision.</p>
-<p>From the class discussion, we wrote down five specific questions that are particularly interesting.</p>
-<ol>
-<li>Which web frameworks are forked the most?</li>
-<li>Which web frameworks are starred the most?</li>
-<li>Which web frameworks are referenced the most in github.</li>
-<li>What constitutes a web framework?</li>
-<li>Is the company interested in front-end frameworks, server side, or both?</li>
-</ol>
-<p>From the above list, my team chose a question, worked on it, and created a report on the next page.</p>
-<p>We decided to answer question 2 for server-side frameworks, using the star count from  <a href="https://github.com/showcases/web-application-frameworks?s=starskar" target="_blank">Web Application Frameworks</a>.  We felt this was a better indication of popularity than forking, since the latter indicates how often the repository was copied for development purposes, rather than usage in an application.</p>
+                        <h1 id="analysis">Analysis</h1>
+<p>After completing the warmup exercises, your task is to do four more slightly challenging analyses.</p>
+<h2 id="how-many-students-like-sushi-as-their-favorite-food">How many students like sushi as their favorite food?</h2>
+<p><pre>
+<span class="keyword">var</span> LANGUAGES = [<span class="string">&apos;c&apos;</span>, <span class="string">&apos;python&apos;</span>, <span class="string">&apos;ruby&apos;</span>, <span class="string">&apos;haskell&apos;</span>, <span class="string">&apos;javascript&apos;</span>, <span class="string">&apos;java&apos;</span>, <span class="string">&apos;c++&apos;</span>, <span class="string">&apos;c#&apos;</span>, <span class="string">&apos;js&apos;</span>]
+
+<span class="comment">/* Parse comments to use later */</span>
+<span class="keyword">function</span> parse_comments(comments) {
+    <span class="keyword">var</span> uid = comments.user.login
+    <span class="keyword">var</span> lines = comments.body.split(<span class="string">&apos;\r\n&apos;</span>)
+    <span class="keyword">var</span> name = (lines[<span class="number">0</span>].split(<span class="string">&apos;:&apos;</span>))[<span class="number">1</span>]
+    <span class="keyword">var</span> major = (lines[<span class="number">1</span>].split(<span class="string">&apos;:&apos;</span>))[<span class="number">1</span>]
+    <span class="keyword">var</span> lang = (lines[<span class="number">2</span>].split(<span class="string">&apos;:&apos;</span>))[<span class="number">1</span>].toLowerCase().split(/\s|,/)	
+    lang = _.intersection((_.includes(lang, <span class="string">&apos;js&apos;</span>)? _.remove(lang, [<span class="string">&apos;js&apos;</span>]).concat(<span class="string">&apos;javascript&apos;</span>):lang), LANGUAGES)	
+    <span class="keyword">var</span> food = (lines[<span class="number">3</span>].split(<span class="string">&apos;:&apos;</span>))[<span class="number">1</span>].toLowerCase()
+    <span class="keyword">return</span> {<span class="string">&apos;Uid&apos;</span>: uid, <span class="string">&apos;Name&apos;</span>: name, <span class="string">&apos;Major&apos;</span>: major, <span class="string">&apos;Lang&apos;</span>: lang, <span class="string">&apos;Food&apos;</span>: food}
+}
+
+data.students = (data.comments).map(parse_comments)
+
+<span class="keyword">var</span> sushi_lovers = _.reduce(_.pluck(data.students, <span class="string">&apos;Food&apos;</span>), <span class="keyword">function</span>(memo, food) {
+    <span class="keyword">return</span> memo + Number(food.indexOf(<span class="string">&apos;sushi&apos;</span>) != -<span class="number">1</span>)
+}, <span class="number">0</span>)
+
+<span class="keyword">return</span> [sushi_lovers]
+</pre>
+The answer is 5</p>
+<h2 id="who-are-the-students-liking-python-the-most">Who are the students liking Python the most?</h2>
+<p><pre>
+<span class="keyword">var</span> pythonistas = _.pluck(_.filter(data.students, 
+    <span class="keyword">function</span>(student) {
+  		<span class="keyword">return</span> _.includes(student.Lang, <span class="string">&apos;python&apos;</span>)
+    }), <span class="string">&apos;Name&apos;</span>)
+
+<span class="keyword">return</span> [pythonistas]
+</pre>
+Their names are  William Farmer, Heather Witte, Zach Lamb, Zhili Yang, John Cronk, Denis Kazakov, Caleb Hsu, Karen Blakemore, Sanketh S Shetty, Andrey Shprengel.</p>
+<h1 id="are-there-more-javascript-lovers-or-java-lovers">Are there more Javascript lovers or Java lovers?</h1>
+<p><pre>
+<span class="keyword">var</span> java_fans = _.filter(data.students, <span class="keyword">function</span>(student){
+    <span class="keyword">return</span> _.includes(student.Lang, <span class="string">&apos;java&apos;</span>)
+})
+
+<span class="keyword">var</span> javascript_fans = _.filter(data.students, <span class="keyword">function</span>(student) {
+    <span class="keyword">return</span> _.includes(student.Lang, <span class="string">&apos;javascript&apos;</span>) || _.includes(student.Lang, <span class="string">&apos;js&apos;</span>)
+})
+
+<span class="keyword">var</span> java_vs_js = (java_fans.length &gt; javascript_fans.length? <span class="string">&apos;Java&apos;</span>: <span class="string">&apos;Javascript&apos;</span>)
+
+<span class="keyword">return</span> [java_vs_js]
+</pre>
+The answer is Java.</p>
+<h2 id="who-likes-the-same-food-as-kjblakemore">Who likes the same food as <code>kjblakemore</code>?</h2>
+<p><pre>
+<span class="keyword">var</span> names = _.filter(data.students, <span class="keyword">function</span>(student) {
+        <span class="keyword">return</span> student.food == _.result(_.find(data.students, <span class="keyword">function</span>(student) {
+  	<span class="keyword">return</span> student.Uid == <span class="string">&apos;kjblakemore&apos;</span>
+    }), <span class="string">&apos;Food&apos;</span>)
+})
+
+<span class="keyword">return</span> [names]
+</pre>
+Their names are .</p>
 
                     
                     </section>
@@ -547,10 +598,10 @@
         </div>
 
         
-        <a href="../../hackathons/tinker/index.html" class="navigation navigation-prev " aria-label="Previous page: Tinker"><i class="fa fa-angle-left"></i></a>
+        <a href="../../hackathons/classmates/warmup.html" class="navigation navigation-prev " aria-label="Previous page: Warmup"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../hackathons/tinker/report.html" class="navigation navigation-next " aria-label="Next page: Report"><i class="fa fa-angle-right"></i></a>
+        <a href="../../hackathons/classmates/report.html" class="navigation navigation-next " aria-label="Next page: Report"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

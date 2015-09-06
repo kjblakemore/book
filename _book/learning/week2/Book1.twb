@@ -1,0 +1,1420 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<workbook source-platform='mac' version='9.0' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <!-- build 9000.15.0820.1222                                -->
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='9.0'>
+      <aliases enabled='yes' />
+      <column caption='Parameter 1' datatype='real' name='[Parameter 1]' param-domain-type='any' role='measure' type='quantitative' value='1.0'>
+        <calculation class='tableau' formula='1.0' />
+      </column>
+    </datasource>
+    <datasource caption='Students (data)' inline='true' name='excel-direct.42252.816108067100' version='9.0'>
+      <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='/Users/karenblakemore/HCCBigData/book/learning/week2/data.xlsx' password='' server='' username='' validate='no'>
+        <relation name='Students$' table='[Students$]' type='table'>
+          <columns header='yes' outcome='6'>
+            <column datatype='datetime' name='Create Date' ordinal='0' />
+            <column datatype='datetime' name='Update Date' ordinal='1' />
+            <column datatype='integer' name='Computer Science' ordinal='2' />
+            <column datatype='integer' name='C' ordinal='3' />
+            <column datatype='integer' name='C#' ordinal='4' />
+            <column datatype='integer' name='C++' ordinal='5' />
+            <column datatype='integer' name='Haskell' ordinal='6' />
+            <column datatype='integer' name='Java' ordinal='7' />
+            <column datatype='integer' name='Javascript' ordinal='8' />
+            <column datatype='integer' name='Python' ordinal='9' />
+            <column datatype='integer' name='Ruby' ordinal='10' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Create Date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Create Date]</local-name>
+            <parent-name>[Students$]</parent-name>
+            <remote-alias>Create Date</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Update Date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Update Date]</local-name>
+            <parent-name>[Students$]</parent-name>
+            <remote-alias>Update Date</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Computer Science</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Computer Science]</local-name>
+            <parent-name>[Students$]</parent-name>
+            <remote-alias>Computer Science</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>C</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[C]</local-name>
+            <parent-name>[Students$]</parent-name>
+            <remote-alias>C</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>C#</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[C#]</local-name>
+            <parent-name>[Students$]</parent-name>
+            <remote-alias>C#</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>C++</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[C++]</local-name>
+            <parent-name>[Students$]</parent-name>
+            <remote-alias>C++</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Haskell</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Haskell]</local-name>
+            <parent-name>[Students$]</parent-name>
+            <remote-alias>Haskell</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Java</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Java]</local-name>
+            <parent-name>[Students$]</parent-name>
+            <remote-alias>Java</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Javascript</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Javascript]</local-name>
+            <parent-name>[Students$]</parent-name>
+            <remote-alias>Javascript</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Python</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Python]</local-name>
+            <parent-name>[Students$]</parent-name>
+            <remote-alias>Python</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Ruby</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Ruby]</local-name>
+            <parent-name>[Students$]</parent-name>
+            <remote-alias>Ruby</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name></remote-name>
+            <remote-type>0</remote-type>
+            <parent-name>[Students$]</parent-name>
+            <remote-alias></remote-alias>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <column datatype='integer' name='[Computer Science (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='-1' formula='[Computer Science]' peg='0' size='0.1' />
+      </column>
+      <column datatype='integer' name='[Computer Science]' role='measure' type='quantitative'>
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <layout dim-ordering='alphabetic' dim-percentage='0.5' measure-ordering='alphabetic' measure-percentage='0.4' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='Students (data) (2)' inline='true' name='excel-direct.42252.904530231500' version='9.0'>
+      <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='/Users/karenblakemore/HCCBigData/book/learning/week2/data.xlsx' password='' server='' username='' validate='no'>
+        <relation name='Students$' table='[Students$]' type='table'>
+          <columns header='yes' outcome='6'>
+            <column datatype='datetime' name='Create Date' ordinal='0' />
+            <column datatype='datetime' name='Update Date' ordinal='1' />
+            <column datatype='integer' name='Computer Science' ordinal='2' />
+            <column datatype='integer' name='C' ordinal='3' />
+            <column datatype='integer' name='C#' ordinal='4' />
+            <column datatype='integer' name='C++' ordinal='5' />
+            <column datatype='integer' name='Haskell' ordinal='6' />
+            <column datatype='integer' name='Java' ordinal='7' />
+            <column datatype='integer' name='Javascript' ordinal='8' />
+            <column datatype='integer' name='Python' ordinal='9' />
+            <column datatype='integer' name='Ruby' ordinal='10' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Create Date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Create Date]</local-name>
+            <parent-name>[Students$]</parent-name>
+            <remote-alias>Create Date</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Update Date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Update Date]</local-name>
+            <parent-name>[Students$]</parent-name>
+            <remote-alias>Update Date</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Computer Science</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Computer Science]</local-name>
+            <parent-name>[Students$]</parent-name>
+            <remote-alias>Computer Science</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>C</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[C]</local-name>
+            <parent-name>[Students$]</parent-name>
+            <remote-alias>C</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>C#</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[C#]</local-name>
+            <parent-name>[Students$]</parent-name>
+            <remote-alias>C#</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>C++</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[C++]</local-name>
+            <parent-name>[Students$]</parent-name>
+            <remote-alias>C++</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Haskell</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Haskell]</local-name>
+            <parent-name>[Students$]</parent-name>
+            <remote-alias>Haskell</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Java</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Java]</local-name>
+            <parent-name>[Students$]</parent-name>
+            <remote-alias>Java</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Javascript</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Javascript]</local-name>
+            <parent-name>[Students$]</parent-name>
+            <remote-alias>Javascript</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Python</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Python]</local-name>
+            <parent-name>[Students$]</parent-name>
+            <remote-alias>Python</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Ruby</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Ruby]</local-name>
+            <parent-name>[Students$]</parent-name>
+            <remote-alias>Ruby</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name></remote-name>
+            <remote-type>0</remote-type>
+            <parent-name>[Students$]</parent-name>
+            <remote-alias></remote-alias>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <layout dim-ordering='alphabetic' dim-percentage='0.5' measure-ordering='alphabetic' measure-percentage='0.4' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='Students (data) (3)' inline='true' name='excel-direct.42252.905506296300' version='9.0'>
+      <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='/Users/karenblakemore/HCCBigData/book/learning/week2/data.xlsx' password='' server='' username='' validate='no'>
+        <relation name='Students$' table='[Students$]' type='table'>
+          <columns header='yes' outcome='6'>
+            <column datatype='datetime' name='Create Date' ordinal='0' />
+            <column datatype='datetime' name='Update Date' ordinal='1' />
+            <column datatype='integer' name='Computer Science' ordinal='2' />
+            <column datatype='integer' name='C' ordinal='3' />
+            <column datatype='integer' name='C#' ordinal='4' />
+            <column datatype='integer' name='C++' ordinal='5' />
+            <column datatype='integer' name='Haskell' ordinal='6' />
+            <column datatype='integer' name='Java' ordinal='7' />
+            <column datatype='integer' name='Javascript' ordinal='8' />
+            <column datatype='integer' name='Python' ordinal='9' />
+            <column datatype='integer' name='Ruby' ordinal='10' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Create Date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Create Date]</local-name>
+            <parent-name>[Students$]</parent-name>
+            <remote-alias>Create Date</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Update Date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Update Date]</local-name>
+            <parent-name>[Students$]</parent-name>
+            <remote-alias>Update Date</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Computer Science</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Computer Science]</local-name>
+            <parent-name>[Students$]</parent-name>
+            <remote-alias>Computer Science</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>C</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[C]</local-name>
+            <parent-name>[Students$]</parent-name>
+            <remote-alias>C</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>C#</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[C#]</local-name>
+            <parent-name>[Students$]</parent-name>
+            <remote-alias>C#</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>C++</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[C++]</local-name>
+            <parent-name>[Students$]</parent-name>
+            <remote-alias>C++</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Haskell</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Haskell]</local-name>
+            <parent-name>[Students$]</parent-name>
+            <remote-alias>Haskell</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Java</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Java]</local-name>
+            <parent-name>[Students$]</parent-name>
+            <remote-alias>Java</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Javascript</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Javascript]</local-name>
+            <parent-name>[Students$]</parent-name>
+            <remote-alias>Javascript</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Python</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Python]</local-name>
+            <parent-name>[Students$]</parent-name>
+            <remote-alias>Python</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Ruby</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Ruby]</local-name>
+            <parent-name>[Students$]</parent-name>
+            <remote-alias>Ruby</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name></remote-name>
+            <remote-type>0</remote-type>
+            <parent-name>[Students$]</parent-name>
+            <remote-alias></remote-alias>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <layout dim-ordering='alphabetic' dim-percentage='0.5' measure-ordering='alphabetic' measure-percentage='0.4' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Computer Science Students'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>&lt;</run>
+            <run>Sheet Name</run>
+            <run>&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Students (data)' name='excel-direct.42252.816108067100' />
+          </datasources>
+          <datasource-dependencies datasource='excel-direct.42252.816108067100'>
+            <column datatype='integer' name='[Computer Science (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='-1' formula='[Computer Science]' peg='0' size='0.1' />
+            </column>
+            <column datatype='integer' name='[Computer Science]' role='measure' type='quantitative'>
+            </column>
+            <column-instance column='[Computer Science]' derivation='Count' name='[cnt:Computer Science:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='font-size' field='[excel-direct.42252.816108067100].[cnt:Computer Science:qk]' value='24' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-size' scope='cols' value='24' />
+          </style-rule>
+          <style-rule element='legend-title'>
+            <format attr='font-size' value='24' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[excel-direct.42252.816108067100].[Computer Science (bin)]' value='Computer Science Students' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[excel-direct.42252.816108067100].[Computer Science (bin)]' />
+              <size column='[excel-direct.42252.816108067100].[cnt:Computer Science:qk]' />
+              <text column='[excel-direct.42252.816108067100].[cnt:Computer Science:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows></rows>
+        <cols></cols>
+      </table>
+    </worksheet>
+    <worksheet name='Early Intros'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Students (data)' name='excel-direct.42252.816108067100' />
+          </datasources>
+          <datasource-dependencies datasource='excel-direct.42252.816108067100'>
+            <column datatype='datetime' name='[Create Date]' role='dimension' type='ordinal'>
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[Create Date]' derivation='None' name='[none:Create Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Create Date]' derivation='Hour-Trunc' name='[thr:Create Date:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[excel-direct.42252.816108067100].[none:Create Date:ok]'>
+            <groupfilter from='#2015-08-20 22:39:50#' function='range' level='[none:Create Date:ok]' to='#2015-08-26 22:41:40#' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[excel-direct.42252.816108067100].[none:Create Date:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='label'>
+            <format attr='text-format' field='[excel-direct.42252.816108067100].[thr:Create Date:qk]' value='*' />
+            <format attr='font-size' field='[excel-direct.42252.816108067100].[thr:Create Date:qk]' value='14' />
+            <format attr='font-size' field='[excel-direct.42252.816108067100].[sum:Number of Records:qk]' value='14' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' center='#2015-08-24 10:00:00#' field='[excel-direct.42252.816108067100].[thr:Create Date:qk]' max='#2015-08-26 22:00:00#' min='#2015-08-20 22:00:00#' num-steps='2' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-diverging'>
+                <color>#239c26</color>
+                <color>#3ea541</color>
+                <color>#5dae5f</color>
+                <color>#7eb780</color>
+                <color>#a2c0a3</color>
+                <color>#cacaca</color>
+                <color>#bb999b</color>
+                <color>#ac6d72</color>
+                <color>#9d474d</color>
+                <color>#8e272e</color>
+                <color>#800c14</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[excel-direct.42252.816108067100].[thr:Create Date:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#26794a' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[excel-direct.42252.816108067100].[thr:Create Date:qk]</rows>
+        <cols>[excel-direct.42252.816108067100].[sum:Number of Records:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Intro Updates'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Students (data)' name='excel-direct.42252.816108067100' />
+          </datasources>
+          <datasource-dependencies datasource='excel-direct.42252.816108067100'>
+            <column datatype='datetime' name='[Create Date]' role='dimension' type='ordinal'>
+            </column>
+            <column datatype='datetime' name='[Update Date]' role='dimension' type='ordinal'>
+            </column>
+            <column-instance column='[Create Date]' derivation='Hour-Trunc' name='[thr:Create Date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Update Date]' derivation='Hour-Trunc' name='[thr:Update Date:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[excel-direct.42252.816108067100].[:Measure Names]'>
+            <groupfilter function='level-members' level='[:Measure Names]' />
+          </filter>
+          <slices>
+            <column>[excel-direct.42252.816108067100].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='width' field='[excel-direct.42252.816108067100].[thr:Update Date:qk]' value='216' />
+            <encoding attr='space' class='0' field='[excel-direct.42252.816108067100].[thr:Update Date:qk]' field-type='quantitative' range-type='uniform' scope='rows' type='space' />
+            <format attr='subtitle' class='0' field='[excel-direct.42252.816108067100].[thr:Update Date:qk]' scope='rows' value='' />
+            <format attr='auto-subtitle' class='0' field='[excel-direct.42252.816108067100].[thr:Update Date:qk]' scope='rows' value='true' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='height' field='[excel-direct.42252.816108067100].[thr:Create Date:qk]' value='39' />
+            <format attr='width' field='[excel-direct.42252.816108067100].[thr:Update Date:qk]' value='55' />
+            <format attr='font-size' field='[excel-direct.42252.816108067100].[thr:Update Date:qk]' value='24' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[excel-direct.42252.816108067100].[thr:Create Date:qk]' value='*' />
+            <format attr='font-size' field='[excel-direct.42252.816108067100].[thr:Create Date:qk]' value='14' />
+            <format attr='font-size' field='[excel-direct.42252.816108067100].[thr:Update Date:qk]' value='14' />
+            <format attr='text-format' field='[excel-direct.42252.816108067100].[thr:Update Date:qk]' value='*' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='4'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Shape' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.4832596778869629' />
+                <format attr='mark-transparency' value='255' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[excel-direct.42252.816108067100].[thr:Update Date:qk]</rows>
+        <cols>[excel-direct.42252.816108067100].[thr:Create Date:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Languages'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Students (data)' name='excel-direct.42252.816108067100' />
+          </datasources>
+          <datasource-dependencies datasource='excel-direct.42252.816108067100'>
+            <column datatype='integer' name='[C#]' role='measure' type='quantitative'>
+            </column>
+            <column datatype='integer' name='[C++]' role='measure' type='quantitative'>
+            </column>
+            <column datatype='integer' name='[C]' role='measure' type='quantitative'>
+            </column>
+            <column datatype='integer' name='[Haskell]' role='measure' type='quantitative'>
+            </column>
+            <column datatype='integer' name='[Java]' role='measure' type='quantitative'>
+            </column>
+            <column datatype='integer' name='[Javascript]' role='measure' type='quantitative'>
+            </column>
+            <column datatype='integer' name='[Python]' role='measure' type='quantitative'>
+            </column>
+            <column datatype='integer' name='[Ruby]' role='measure' type='quantitative'>
+            </column>
+            <column-instance column='[C#]' derivation='Sum' name='[sum:C#:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[C++]' derivation='Sum' name='[sum:C++:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[C]' derivation='Sum' name='[sum:C:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Haskell]' derivation='Sum' name='[sum:Haskell:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Java]' derivation='Sum' name='[sum:Java:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Javascript]' derivation='Sum' name='[sum:Javascript:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Python]' derivation='Sum' name='[sum:Python:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Ruby]' derivation='Sum' name='[sum:Ruby:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[excel-direct.42252.816108067100].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[excel-direct.42252.816108067100].[sum:C:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[excel-direct.42252.816108067100].[sum:C\#:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[excel-direct.42252.816108067100].[sum:C++:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[excel-direct.42252.816108067100].[sum:Haskell:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[excel-direct.42252.816108067100].[sum:Java:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[excel-direct.42252.816108067100].[sum:Javascript:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[excel-direct.42252.816108067100].[sum:Python:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[excel-direct.42252.816108067100].[sum:Ruby:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <sort class='manual' column='[excel-direct.42252.816108067100].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[excel-direct.42252.816108067100].[sum:C\#:qk]&quot;</bucket>
+              <bucket>&quot;[excel-direct.42252.816108067100].[sum:Haskell:qk]&quot;</bucket>
+              <bucket>&quot;[excel-direct.42252.816108067100].[sum:Ruby:qk]&quot;</bucket>
+              <bucket>&quot;[excel-direct.42252.816108067100].[sum:C++:qk]&quot;</bucket>
+              <bucket>&quot;[excel-direct.42252.816108067100].[sum:Javascript:qk]&quot;</bucket>
+              <bucket>&quot;[excel-direct.42252.816108067100].[sum:Java:qk]&quot;</bucket>
+              <bucket>&quot;[excel-direct.42252.816108067100].[sum:C:qk]&quot;</bucket>
+              <bucket>&quot;[excel-direct.42252.816108067100].[sum:Python:qk]&quot;</bucket>
+            </dictionary>
+          </sort>
+          <slices>
+            <column>[excel-direct.42252.816108067100].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[excel-direct.42252.816108067100].[Multiple Values]' field-type='quantitative' major-origin='0.0' major-spacing='1.0' max='11.550000000000001' min='0.0' range-type='fixed' scope='cols' type='space' />
+            <format attr='title' class='0' field='[excel-direct.42252.816108067100].[Multiple Values]' scope='cols' value='Number of Students' />
+            <format attr='subtitle' class='0' field='[excel-direct.42252.816108067100].[Multiple Values]' scope='cols' value='' />
+            <format attr='auto-subtitle' class='0' field='[excel-direct.42252.816108067100].[Multiple Values]' scope='cols' value='true' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[excel-direct.42252.816108067100].[sum:C#:qk]' value='n#,##0' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-size' field='[excel-direct.42252.816108067100].[:Measure Names]' value='24' />
+            <format attr='font-size' field='[excel-direct.42252.816108067100].[Multiple Values]' value='24' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[excel-direct.42252.816108067100].[:Measure Names]</rows>
+        <cols>[excel-direct.42252.816108067100].[Multiple Values]</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows>
+    <window class='schema' source-height='-1' />
+    <window auto-hidden='0' class='worksheet' maximized='0' name='Early Intros'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='0' param='[excel-direct.42252.816108067100].[thr:Create Date:qk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[excel-direct.42252.816108067100].[none:Create Date:ok]' type='filter' />
+            <card mode='type_in' param='[Parameters].[Parameter 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-width' />
+      </viewpoint>
+      <highlight>
+        <color-one-way>
+          <field>[excel-direct.42252.816108067100].[hr:Create Date:ok]</field>
+          <field>[excel-direct.42252.816108067100].[thr:Create Date:qk]</field>
+          <field>[excel-direct.42252.816108067100].[yr:Create Date:ok]</field>
+          <field>[excel-direct.42252.816108067100].[yr:Update Date:ok]</field>
+        </color-one-way>
+      </highlight>
+    </window>
+    <window auto-hidden='0' class='worksheet' maximized='0' name='Intro Updates'>
+      <cards>
+        <edge name='left'>
+          <strip size='100'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <highlight>
+        <color-one-way>
+          <field>[excel-direct.42252.816108067100].[:Measure Names]</field>
+          <field>[excel-direct.42252.816108067100].[hr:Update Date:ok]</field>
+          <field>[excel-direct.42252.816108067100].[thr:Create Date:ok]</field>
+          <field>[excel-direct.42252.816108067100].[thr:Create Date:qk]</field>
+          <field>[excel-direct.42252.816108067100].[thr:Update Date:ok]</field>
+          <field>[excel-direct.42252.816108067100].[thr:Update Date:qk]</field>
+          <field>[excel-direct.42252.816108067100].[yr:Create Date:ok]</field>
+          <field>[excel-direct.42252.816108067100].[yr:Update Date:ok]</field>
+        </color-one-way>
+      </highlight>
+    </window>
+    <window auto-hidden='0' class='worksheet' maximized='0' name='Languages'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <highlight>
+        <color-one-way>
+          <field>[excel-direct.42252.816108067100].[:Measure Names]</field>
+        </color-one-way>
+      </highlight>
+    </window>
+    <window auto-hidden='0' class='worksheet' maximized='1' name='Computer Science Students'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='0' param='[excel-direct.42252.816108067100].[cnt:Computer Science:qk]' type='size' />
+            <card pane-specification-id='0' param='[excel-direct.42252.816108067100].[Computer Science (bin)]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <highlight>
+        <color-one-way>
+          <field>[excel-direct.42252.816108067100].[:Measure Names]</field>
+          <field>[excel-direct.42252.816108067100].[Computer Science (bin)]</field>
+        </color-one-way>
+      </highlight>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Early Intros' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Intro Updates' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Languages' width='192'>
+      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
+      SUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='Computer Science Students' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
