@@ -5,7 +5,7 @@
         <!-- head:start -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Method | book</title>
+        <title>Warmup | book</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.2.0">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../../hackathons/tinker/report.html" />
+    <link rel="next" href="../../hackathons/classmates/analysis.html" />
     
     
-    <link rel="prev" href="../../hackathons/tinker/index.html" />
+    <link rel="prev" href="../../hackathons/classmates/data.html" />
     
 
         <!-- head:end -->
@@ -48,7 +48,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="2.1.1" data-basepath="../.." data-revision="Sun Sep 06 2015 12:03:25 GMT-0600 (MDT)">
+    <div class="book" data-level="2.2.2" data-basepath="../.." data-revision="Sun Sep 06 2015 12:03:25 GMT-0600 (MDT)">
     
 
 <div class="book-summary">
@@ -299,7 +299,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="2.1.1" data-path="hackathons/tinker/method.html">
+        <li class="chapter " data-level="2.1.1" data-path="hackathons/tinker/method.html">
             
                 
                     <a href="../../hackathons/tinker/method.html">
@@ -365,7 +365,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.2" data-path="hackathons/classmates/warmup.html">
+        <li class="chapter active" data-level="2.2.2" data-path="hackathons/classmates/warmup.html">
             
                 
                     <a href="../../hackathons/classmates/warmup.html">
@@ -525,18 +525,66 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="method">Method</h1>
-<p>The main question is too general and too vague. As a class, we brainstormed and came up with a list of specific questions that are easier to tackle while useful for making the decision.</p>
-<p>From the class discussion, we wrote down five specific questions that are particularly interesting.</p>
-<ol>
-<li>Which web frameworks are forked the most?</li>
-<li>Which web frameworks are starred the most?</li>
-<li>Which web frameworks are referenced the most in github.</li>
-<li>What constitutes a web framework?</li>
-<li>Is the company interested in front-end frameworks, server side, or both?</li>
-</ol>
-<p>From the above list, my team chose a question, worked on it, and created a report on the next page.</p>
-<p>We decided to answer question 2 for server-side frameworks, using the star count from  <a href="https://github.com/showcases/web-application-frameworks?s=starskar" target="_blank">Web Application Frameworks</a>.  We felt this was a better indication of popularity than forking, since the latter indicates how often the repository was copied for development purposes, rather than usage in an application.</p>
+                        <h1 id="warmup">Warmup</h1>
+<p>As warmup, let&apos;s being with some simple questions.</p>
+<p>The comments data is imported as <code>data.comments</code>.</p>
+<h2 id="how-many-people-have-submitted-comments">How many people have submitted comments?</h2>
+<p><pre>
+<span class="comment">// TODO: write code to answer this question</span>
+<span class="keyword">return</span> data.comments.length
+</pre></p>
+<p>There are 26 submissions.</p>
+<h2 id="who-is-the-first-person-submitting-a-comment">Who is the first person submitting a comment?</h2>
+<p>We can get the data of the first comment by</p>
+<p><pre>
+<span class="keyword">return</span> _.first(data.comments)
+</pre></p>
+<p>The result is</p>
+<pre>{
+ &quot;url&quot;: &quot;https://api.github.com/repos/bigdatahci2015/forum/issues/comments/133203904&quot;,
+ &quot;html_url&quot;: &quot;https://github.com/bigdatahci2015/forum/issues/1#issuecomment-133203904&quot;,
+ &quot;issue_url&quot;: &quot;https://api.github.com/repos/bigdatahci2015/forum/issues/1&quot;,
+ &quot;id&quot;: 133203904,
+ &quot;user&quot;: {
+  &quot;login&quot;: &quot;willzfarmer&quot;,
+  &quot;id&quot;: 546524,
+  &quot;avatar_url&quot;: &quot;https://avatars.githubusercontent.com/u/546524?v=3&quot;,
+  &quot;gravatar_id&quot;: &quot;&quot;,
+  &quot;url&quot;: &quot;https://api.github.com/users/willzfarmer&quot;,
+  &quot;html_url&quot;: &quot;https://github.com/willzfarmer&quot;,
+  &quot;followers_url&quot;: &quot;https://api.github.com/users/willzfarmer/followers&quot;,
+  &quot;following_url&quot;: &quot;https://api.github.com/users/willzfarmer/following{/other_user}&quot;,
+  &quot;gists_url&quot;: &quot;https://api.github.com/users/willzfarmer/gists{/gist_id}&quot;,
+  &quot;starred_url&quot;: &quot;https://api.github.com/users/willzfarmer/starred{/owner}{/repo}&quot;,
+  &quot;subscriptions_url&quot;: &quot;https://api.github.com/users/willzfarmer/subscriptions&quot;,
+  &quot;organizations_url&quot;: &quot;https://api.github.com/users/willzfarmer/orgs&quot;,
+  &quot;repos_url&quot;: &quot;https://api.github.com/users/willzfarmer/repos&quot;,
+  &quot;events_url&quot;: &quot;https://api.github.com/users/willzfarmer/events{/privacy}&quot;,
+  &quot;received_events_url&quot;: &quot;https://api.github.com/users/willzfarmer/received_events&quot;,
+  &quot;type&quot;: &quot;User&quot;,
+  &quot;site_admin&quot;: false
+ },
+ &quot;created_at&quot;: &quot;2015-08-20T22:39:50Z&quot;,
+ &quot;updated_at&quot;: &quot;2015-08-20T22:39:50Z&quot;,
+ &quot;body&quot;: &quot;Name: William Farmer\r\nMajor: Applied Math w/ Minor in Computer Science\r\nFavorite Programming Language: Python\r\nFavorite Food: Sushi&quot;
+}</pre>
+
+<p>The person&apos;s name is willzfarmer.</p>
+<h2 id="what-is-willzfarmer-s-favorite-food">What is willzfarmer&apos;s favorite food?</h2>
+<p>We will need to parse the comment to retrieve this data.</p>
+<p>The comment text is</p>
+<pre>&quot;Name: William Farmer\r\nMajor: Applied Math w/ Minor in Computer Science\r\nFavorite Programming Language: Python\r\nFavorite Food: Sushi&quot;</pre>
+
+<p>The code to retrieve the data about the favorite food is (hint: use <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split" target="_blank">split()</a>).</p>
+<p><pre>
+<span class="keyword">var</span> text = _.first(data.comments).body
+
+<span class="keyword">var</span> tokens = text.split(<span class="string">&quot; &quot;</span>)
+<span class="keyword">return</span> (tokens[tokens.length-<span class="number">1</span>])
+
+<span class="keyword">return</span> <span class="string">&apos;Sushi&apos;</span>
+</pre></p>
+<p>So, willzfarmer&apos;s favorite food is Sushi.</p>
 
                     
                     </section>
@@ -547,10 +595,10 @@
         </div>
 
         
-        <a href="../../hackathons/tinker/index.html" class="navigation navigation-prev " aria-label="Previous page: Tinker"><i class="fa fa-angle-left"></i></a>
+        <a href="../../hackathons/classmates/data.html" class="navigation navigation-prev " aria-label="Previous page: Data"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../hackathons/tinker/report.html" class="navigation navigation-next " aria-label="Next page: Report"><i class="fa fa-angle-right"></i></a>
+        <a href="../../hackathons/classmates/analysis.html" class="navigation navigation-next " aria-label="Next page: Analysis"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
