@@ -5,7 +5,7 @@
         <!-- head:start -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Analysis | book</title>
+        <title>Lodash Drills | book</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.2.0">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../../hackathons/classmates/report.html" />
+    <link rel="next" href="../../learning/week3/lodash-groupby.html" />
     
     
-    <link rel="prev" href="../../hackathons/classmates/warmup.html" />
+    <link rel="prev" href="../../learning/week3/github-api.html" />
     
 
         <!-- head:end -->
@@ -48,7 +48,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="2.2.3" data-basepath="../.." data-revision="Wed Sep 09 2015 11:32:57 GMT-0600 (MDT)">
+    <div class="book" data-level="1.4.2" data-basepath="../.." data-revision="Wed Sep 09 2015 11:32:57 GMT-0600 (MDT)">
     
 
 <div class="book-summary">
@@ -293,7 +293,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="learning/week3/lodash-drills.html">
+        <li class="chapter active" data-level="1.4.2" data-path="learning/week3/lodash-drills.html">
             
                 
                     <a href="../../learning/week3/lodash-drills.html">
@@ -446,7 +446,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.2.3" data-path="hackathons/classmates/analysis.html">
+        <li class="chapter " data-level="2.2.3" data-path="hackathons/classmates/analysis.html">
             
                 
                     <a href="../../hackathons/classmates/analysis.html">
@@ -591,69 +591,126 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="analysis">Analysis</h1>
-<p>After completing the warmup exercises, your task is to do four more slightly challenging analyses.</p>
-<h2 id="how-many-students-like-sushi-as-their-favorite-food">How many students like sushi as their favorite food?</h2>
-<p><pre>
-<span class="keyword">var</span> LANGUAGES = [<span class="string">&apos;c&apos;</span>, <span class="string">&apos;python&apos;</span>, <span class="string">&apos;ruby&apos;</span>, <span class="string">&apos;haskell&apos;</span>, <span class="string">&apos;javascript&apos;</span>, <span class="string">&apos;java&apos;</span>, <span class="string">&apos;c++&apos;</span>, <span class="string">&apos;c#&apos;</span>, <span class="string">&apos;js&apos;</span>]
+                        <h1 id="lodash-drills">Lodash Drills</h1>
+<p>Complete the following Lodash exercises. The goal is to become really good at
+functional programming paradigm (e.g., <code>_.map</code>, <code>_.filter</code>, <code>_.all</code>, <code>_.any</code> ...etc) and
+a number of really useful Lodash methods (e.g., <code>_.find</code>, <code>_.pluck</code> ... etc).</p>
+<ul>
+<li>enter your solution in the <code>solution</code> block</li>
+<li>utilize lodash functions as much as possible</li>
+<li>no <code>for/while</code> loop is allowed</li>
+</ul>
+<p>Familiarity with programming in this way will not only make you a super productive
+programmer but also will pave the way for you to learn MapReduce and MongoDB.</p>
+<h1 id="examples">Examples</h1>
+<p></p><h2>How many people?</h2><div class="lodashexercise">   <div class="result"></div><div class="ok">Done</div><div class="section-title">Data</div><pre>[{name: &apos;John&apos;}, {name: &apos;Mary&apos;}, {name: &apos;Joe&apos;}, {name: &apos;Ben&apos;}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>4</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>4</pre></div></div></div><div class="section-title">Solution</div><pre><span class="keyword">return</span> data.length</pre></div><p></p>
+<p></p><h2>What are the names?</h2><div class="lodashexercise">   <div class="result"></div><div class="ok">Done</div><div class="section-title">Data</div><pre>[{name: &apos;John&apos;}, {name: &apos;Mary&apos;}, {name: &apos;Joe&apos;}, {name: &apos;Ben&apos;}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>[
+  &quot;John&quot;,
+  &quot;Mary&quot;,
+  &quot;Joe&quot;,
+  &quot;Ben&quot;
+]</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>[
+  &quot;John&quot;,
+  &quot;Mary&quot;,
+  &quot;Joe&quot;,
+  &quot;Ben&quot;
+]</pre></div></div></div><div class="section-title">Solution</div><pre><span class="keyword">return</span> _.map(data, <span class="keyword">function</span>(d){
+    <span class="keyword">return</span> d.name
+})</pre></div><p></p>
+<h1 id="exercises">Exercises</h1>
+<p></p><h2>What names begin with the letter J?</h2><div class="lodashexercise">   <div class="result"></div><div class="section-title">Data</div><pre>[{name: &apos;John&apos;}, {name: &apos;Mary&apos;}, {name: &apos;Joe&apos;}, {name: &apos;Ben&apos;}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>[
+  &quot;John&quot;,
+  &quot;Joe&quot;
+]</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>&quot;not done&quot;</pre></div></div></div><div class="section-title">Solution</div><pre><span class="keyword">var</span> result = <span class="string">&apos;not done&apos;</span>
+<span class="keyword">return</span> result</pre></div><p></p>
+<p></p><h2>How many Johns?</h2><div class="lodashexercise">   <div class="result"></div><div class="section-title">Data</div><pre>[{name: &apos;John&apos;}, {name: &apos;John&apos;}, {name: &apos;John&apos;}, {name: &apos;Ben&apos;}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>3</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>&quot;not done&quot;</pre></div></div></div><div class="section-title">Solution</div><pre><span class="keyword">var</span> result = <span class="string">&apos;not done&apos;</span>
+<span class="keyword">return</span> result</pre></div><p></p>
+<p></p><h2>What are all the first names?</h2><div class="lodashexercise">   <div class="result"></div><div class="section-title">Data</div><pre>[{name: &apos;John Smith&apos;}, {name: &apos;Mary Kay&apos;}, {name: &apos;Peter Pan&apos;}, {name: &apos;Ben Franklin&apos;}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>[
+  &quot;John&quot;,
+  &quot;Mary&quot;,
+  &quot;Peter&quot;,
+  &quot;Ben&quot;
+]</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>&quot;not done&quot;</pre></div></div></div><div class="section-title">Solution</div><pre><span class="keyword">var</span> result = <span class="string">&apos;not done&apos;</span>
+<span class="keyword">return</span> result</pre></div><p></p>
+<p></p><h2>What are the first names of Smith?</h2><div class="lodashexercise">   <div class="result"></div><div class="section-title">Data</div><pre>[{name: &apos;John Smith&apos;}, {name: &apos;Mary Smith&apos;}, {name: &apos;Peter Pan&apos;}, {name: &apos;Ben Smith&apos;}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>[
+  &quot;John&quot;,
+  &quot;Mary&quot;,
+  &quot;Ben&quot;
+]</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>&quot;not done&quot;</pre></div></div></div><div class="section-title">Solution</div><pre><span class="keyword">var</span> result = <span class="string">&apos;not done&apos;</span>
+<span class="keyword">return</span> result</pre></div><p></p>
+<p></p><h2>Change the format to lastname, firstname</h2><div class="lodashexercise">   <div class="result"></div><div class="section-title">Data</div><pre>[{name: &apos;John Smith&apos;}, {name: &apos;Mary Kay&apos;}, {name: &apos;Peter Pan&apos;}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>[
+  {
+    &quot;name&quot;: &quot;Smith, John&quot;
+  },
+  {
+    &quot;name&quot;: &quot;Kay, Mary&quot;
+  },
+  {
+    &quot;name&quot;: &quot;Pan, Peter&quot;
+  }
+]</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>&quot;not done&quot;</pre></div></div></div><div class="section-title">Solution</div><pre><span class="keyword">var</span> result = <span class="string">&apos;not done&apos;</span>
+<span class="keyword">return</span> result</pre></div><p></p>
+<p></p><h2>How many women?</h2><div class="lodashexercise">   <div class="result"></div><div class="section-title">Data</div><pre>[{name: &apos;John Smith&apos;, gender: &apos;m&apos;}, {name: &apos;Mary Smith&apos;, gender: &apos;f&apos;}, {name: &apos;Peter Pan&apos;, gender: &apos;m&apos;}, {name: &apos;Ben Smith&apos;, gender: &apos;m&apos;}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>1</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>&quot;not done&quot;</pre></div></div></div><div class="section-title">Solution</div><pre><span class="keyword">var</span> result = <span class="string">&apos;not done&apos;</span>
+<span class="keyword">return</span> result</pre></div><p></p>
+<p></p><h2>How many men whose last name is Smith?</h2><div class="lodashexercise">   <div class="result"></div><div class="section-title">Data</div><pre>[{name: &apos;John Smith&apos;, gender: &apos;m&apos;}, {name: &apos;Mary Smith&apos;, gender: &apos;f&apos;}, {name: &apos;Peter Pan&apos;, gender: &apos;m&apos;}, {name: &apos;Ben Smith&apos;, gender: &apos;m&apos;}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>2</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>&quot;not done&quot;</pre></div></div></div><div class="section-title">Solution</div><pre><span class="keyword">var</span> result = <span class="string">&apos;not done&apos;</span>
+<span class="keyword">return</span> result</pre></div><p></p>
+<p></p><h2></h2><div class="lodashexercise">   <div class="result"></div><div class="section-title">Data</div><pre>[{name: &apos;John Smith&apos;, gender: &apos;m&apos;}, {name: &apos;Mary Smith&apos;, gender: &apos;f&apos;}, {name: &apos;Peter Pan&apos;, gender: &apos;m&apos;}, {name: &apos;Ben Smith&apos;, gender: &apos;m&apos;}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>true</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>&quot;not done&quot;</pre></div></div></div><div class="section-title">Solution</div><pre><span class="keyword">var</span> result = <span class="string">&apos;not done&apos;</span>
+<span class="keyword">return</span> result</pre></div><p></p>
+<p></p><h2>What is Peter Pan&apos;s gender?</h2><div class="lodashexercise">   <div class="result"></div><div class="section-title">Data</div><pre>[{name: &apos;John Smith&apos;, gender: &apos;m&apos;}, {name: &apos;Mary Smith&apos;, gender: &apos;f&apos;}, {name: &apos;Peter Pan&apos;, gender: &apos;m&apos;}, {name: &apos;Ben Smith&apos;, gender: &apos;m&apos;}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>&quot;m&quot;</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>&quot;not done&quot;</pre></div></div></div><div class="section-title">Solution</div><pre><span class="keyword">var</span> result = <span class="string">&apos;not done&apos;</span>
+<span class="keyword">return</span> result</pre></div><p></p>
+<p></p><h2>What is the oldest age?</h2><div class="lodashexercise">   <div class="result"></div><div class="section-title">Data</div><pre>[{name: &apos;John Smith&apos;, age: 54}, {name: &apos;Mary Smith&apos;, age: 42}, {name: &apos;Peter Pan&apos;, age: 15}, {name: &apos;Ben Smith&apos;, age: 35}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>54</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>&quot;not done&quot;</pre></div></div></div><div class="section-title">Solution</div><pre><span class="keyword">var</span> result = <span class="string">&apos;not done&apos;</span>
+<span class="keyword">return</span> result</pre></div><p></p>
+<p></p><h2>Is it true everyone is younger than 60?</h2><div class="lodashexercise">   <div class="result"></div><div class="section-title">Data</div><pre>[{name: &apos;John Smith&apos;, age: 54}, {name: &apos;Mary Smith&apos;, age: 42}, {name: &apos;Peter Pan&apos;, age: 15}, {name: &apos;Ben Smith&apos;, age: 35}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>true</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>&quot;not done&quot;</pre></div></div></div><div class="section-title">Solution</div><pre><span class="comment">// use _.all</span>
+<span class="keyword">var</span> result = <span class="string">&apos;not done&apos;</span>
+<span class="keyword">return</span> result</pre></div><p></p>
+<p></p><h2>Is it true someone is not an adult (younger than 18)?</h2><div class="lodashexercise">   <div class="result"></div><div class="section-title">Data</div><pre>[{name: &apos;John Smith&apos;, age: 54}, {name: &apos;Mary Smith&apos;, age: 42}, {name: &apos;Peter Pan&apos;, age: 15}, {name: &apos;Ben Smith&apos;, age: 35}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>true</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>&quot;not done&quot;</pre></div></div></div><div class="section-title">Solution</div><pre><span class="comment">// use _.some</span>
+<span class="keyword">var</span> result = <span class="string">&apos;not done&apos;</span>
+<span class="keyword">return</span> result</pre></div><p></p>
+<p></p><h2>How many people whose favorites include food?</h2><div class="lodashexercise">   <div class="result"></div><div class="section-title">Data</div><pre>[{name: &apos;John Smith&apos;, age: 54, favorites: [&apos;food&apos;, &apos;movies&apos;]},
+ {name: &apos;Mary Smith&apos;, age: 42, favorites: [&apos;food&apos;, &apos;travel&apos;]},
+ {name: &apos;Peter Pan&apos;, age: 15, favorites: [&apos;minecraft&apos;, &apos;pokemo&apos;]},
+ {name: &apos;Ben Smith&apos;, age: 35, favorites: [&apos;craft&apos;, &apos;food&apos;]}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>3</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>&quot;not done&quot;</pre></div></div></div><div class="section-title">Solution</div><pre><span class="keyword">var</span> result = <span class="string">&apos;not done&apos;</span>
+<span class="keyword">return</span> result</pre></div><p></p>
+<p></p><h2>Who are over 40 and love travel?</h2><div class="lodashexercise">   <div class="result"></div><div class="section-title">Data</div><pre>[{name: &apos;John Smith&apos;, age: 54, favorites: [&apos;food&apos;, &apos;movies&apos;]},
+ {name: &apos;Mary Smith&apos;, age: 42, favorites: [&apos;food&apos;, &apos;travel&apos;]},
+ {name: &apos;Peter Pan&apos;, age: 15, favorites: [&apos;minecraft&apos;, &apos;pokemo&apos;]},
+ {name: &apos;Joe Johnson&apos;, age: 46, favorites: [&apos;travel&apos;, &apos;movies&apos;]},
+ {name: &apos;Ben Smith&apos;, age: 35, favorites: [&apos;craft&apos;, &apos;food&apos;]}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>[
+  &quot;Mary Smith&quot;,
+  &quot;Joe Johnson&quot;
+]</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>&quot;not done&quot;</pre></div></div></div><div class="section-title">Solution</div><pre><span class="keyword">var</span> result = <span class="string">&apos;not done&apos;</span>
+<span class="keyword">return</span> result</pre></div><p></p>
+<p></p><h2>Who is the oldest person loving food?</h2><div class="lodashexercise">   <div class="result"></div><div class="section-title">Data</div><pre>[{name: &apos;John Smith&apos;, age: 54, favorites: [&apos;food&apos;, &apos;movies&apos;]},
+ {name: &apos;Mary Smith&apos;, age: 42, favorites: [&apos;food&apos;, &apos;travel&apos;]},
+ {name: &apos;Peter Pan&apos;, age: 15, favorites: [&apos;minecraft&apos;, &apos;pokemo&apos;]},
+ {name: &apos;Joe Johnson&apos;, age: 46, favorites: [&apos;travel&apos;, &apos;movies&apos;]},
+ {name: &apos;Ben Smith&apos;, age: 35, favorites: [&apos;craft&apos;, &apos;food&apos;]}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>&quot;John Smith&quot;</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>&quot;not done&quot;</pre></div></div></div><div class="section-title">Solution</div><pre><span class="keyword">var</span> result = <span class="string">&apos;not done&apos;</span>
+<span class="keyword">return</span> result</pre></div><p></p>
+<p></p><h2>What are all the unique favorites?</h2><div class="lodashexercise">   <div class="result"></div><div class="section-title">Data</div><pre>[{name: &apos;John Smith&apos;, age: 54, favorites: [&apos;food&apos;, &apos;movies&apos;]},
+ {name: &apos;Mary Smith&apos;, age: 42, favorites: [&apos;food&apos;, &apos;travel&apos;]},
+ {name: &apos;Peter Pan&apos;, age: 15, favorites: [&apos;minecraft&apos;, &apos;pokemo&apos;]},
+ {name: &apos;Joe Johnson&apos;, age: 46, favorites: [&apos;travel&apos;, &apos;movies&apos;]},
+ {name: &apos;Ben Smith&apos;, age: 35, favorites: [&apos;craft&apos;, &apos;food&apos;]}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>[
+  &quot;food&quot;,
+  &quot;movies&quot;,
+  &quot;travel&quot;,
+  &quot;minecraft&quot;,
+  &quot;pokemo&quot;,
+  &quot;craft&quot;
+]</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>&quot;not done&quot;</pre></div></div></div><div class="section-title">Solution</div><pre><span class="comment">// hint: use _.pluck, _.uniq, _.flatten in some order</span>
 
-<span class="comment">/* Parse comments to use later */</span>
-<span class="keyword">function</span> parse_comments(comments) {
-    <span class="keyword">var</span> uid = comments.user.login
-    <span class="keyword">var</span> lines = comments.body.split(<span class="string">&apos;\r\n&apos;</span>)
-    <span class="keyword">var</span> name = (lines[<span class="number">0</span>].split(<span class="string">&apos;:&apos;</span>))[<span class="number">1</span>]
-    <span class="keyword">var</span> major = (lines[<span class="number">1</span>].split(<span class="string">&apos;:&apos;</span>))[<span class="number">1</span>]
-    <span class="keyword">var</span> lang = (lines[<span class="number">2</span>].split(<span class="string">&apos;:&apos;</span>))[<span class="number">1</span>].toLowerCase().split(/\s|,/)	
-    lang = _.intersection((_.includes(lang, <span class="string">&apos;js&apos;</span>)? _.remove(lang, [<span class="string">&apos;js&apos;</span>]).concat(<span class="string">&apos;javascript&apos;</span>):lang), LANGUAGES)	
-    <span class="keyword">var</span> food = (lines[<span class="number">3</span>].split(<span class="string">&apos;:&apos;</span>))[<span class="number">1</span>].toLowerCase()
-    <span class="keyword">return</span> {<span class="string">&apos;Uid&apos;</span>: uid, <span class="string">&apos;Name&apos;</span>: name, <span class="string">&apos;Major&apos;</span>: major, <span class="string">&apos;Lang&apos;</span>: lang, <span class="string">&apos;Food&apos;</span>: food}
-}
-
-data.students = (data.comments).map(parse_comments)
-
-<span class="keyword">var</span> sushi_lovers = _.reduce(_.pluck(data.students, <span class="string">&apos;Food&apos;</span>), <span class="keyword">function</span>(memo, food) {
-    <span class="keyword">return</span> memo + Number(food.indexOf(<span class="string">&apos;sushi&apos;</span>) != -<span class="number">1</span>)
-}, <span class="number">0</span>)
-
-<span class="keyword">return</span> [sushi_lovers]
-</pre>
-The answer is 5</p>
-<h2 id="who-are-the-students-liking-python-the-most">Who are the students liking Python the most?</h2>
-<p><pre>
-<span class="keyword">var</span> pythonistas = _.pluck(_.filter(data.students, 
-    <span class="keyword">function</span>(student) {
-  		<span class="keyword">return</span> _.includes(student.Lang, <span class="string">&apos;python&apos;</span>)
-    }), <span class="string">&apos;Name&apos;</span>)
-
-<span class="keyword">return</span> [pythonistas]
-</pre>
-Their names are  William Farmer, Heather Witte, Zach Lamb, Zhili Yang, John Cronk, Denis Kazakov, Caleb Hsu, Karen Blakemore, Sanketh S Shetty, Andrey Shprengel.</p>
-<h1 id="are-there-more-javascript-lovers-or-java-lovers">Are there more Javascript lovers or Java lovers?</h1>
-<p><pre>
-<span class="keyword">var</span> java_fans = _.filter(data.students, <span class="keyword">function</span>(student){
-    <span class="keyword">return</span> _.includes(student.Lang, <span class="string">&apos;java&apos;</span>)
-})
-
-<span class="keyword">var</span> javascript_fans = _.filter(data.students, <span class="keyword">function</span>(student) {
-    <span class="keyword">return</span> _.includes(student.Lang, <span class="string">&apos;javascript&apos;</span>) || _.includes(student.Lang, <span class="string">&apos;js&apos;</span>)
-})
-
-<span class="keyword">var</span> java_vs_js = (java_fans.length &gt; javascript_fans.length? <span class="string">&apos;Java&apos;</span>: <span class="string">&apos;Javascript&apos;</span>)
-
-<span class="keyword">return</span> [java_vs_js]
-</pre>
-The answer is Java.</p>
-<h2 id="who-likes-the-same-food-as-kjblakemore">Who likes the same food as <code>kjblakemore</code>?</h2>
-<p><pre>
-<span class="keyword">var</span> names = _.filter(data.students, <span class="keyword">function</span>(student) {
-        <span class="keyword">return</span> student.food == _.result(_.find(data.students, <span class="keyword">function</span>(student) {
-  	<span class="keyword">return</span> student.Uid == <span class="string">&apos;kjblakemore&apos;</span>
-    }), <span class="string">&apos;Food&apos;</span>)
-})
-
-<span class="keyword">return</span> [names]
-</pre>
-Their names are .</p>
+<span class="keyword">var</span> result = <span class="string">&apos;not done&apos;</span>
+<span class="keyword">return</span> result</pre></div><p></p>
+<p></p><h2>What are all the unique last names?</h2><div class="lodashexercise">   <div class="result"></div><div class="section-title">Data</div><pre>[{name: &apos;John Smith&apos;, age: 54, favorites: [&apos;food&apos;, &apos;movies&apos;]},
+ {name: &apos;Mary Smith&apos;, age: 42, favorites: [&apos;food&apos;, &apos;travel&apos;]},
+ {name: &apos;Peter Pan&apos;, age: 15, favorites: [&apos;minecraft&apos;, &apos;pokemo&apos;]},
+ {name: &apos;Joe Johnson&apos;, age: 46, favorites: [&apos;travel&apos;, &apos;movies&apos;]},
+ {name: &apos;Ben Smith&apos;, age: 35, favorites: [&apos;craft&apos;, &apos;food&apos;]}]</pre><div class="output"><div class="left"><div class="section-title">Expected Output<pre>[
+  &quot;Smith&quot;,
+  &quot;Pan&quot;,
+  &quot;Johnson&quot;
+]</pre></div></div><div class="right"><div class="section-title">Actual Output<pre>&quot;not done&quot;</pre></div></div></div><div class="section-title">Solution</div><pre><span class="keyword">var</span> result = <span class="string">&apos;not done&apos;</span>
+<span class="keyword">return</span> result</pre></div><p></p>
 
                     
                     </section>
@@ -664,10 +721,10 @@ Their names are .</p>
         </div>
 
         
-        <a href="../../hackathons/classmates/warmup.html" class="navigation navigation-prev " aria-label="Previous page: Warmup"><i class="fa fa-angle-left"></i></a>
+        <a href="../../learning/week3/github-api.html" class="navigation navigation-prev " aria-label="Previous page: Github API"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../hackathons/classmates/report.html" class="navigation navigation-next " aria-label="Next page: Report"><i class="fa fa-angle-right"></i></a>
+        <a href="../../learning/week3/lodash-groupby.html" class="navigation navigation-next " aria-label="Next page: Lodash GroupBy"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
