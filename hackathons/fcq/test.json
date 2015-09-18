@@ -1,0 +1,555 @@
+[
+{
+    "AVG_GRD": 2.98,
+    "Activity_Type": "LEC - Lecture",
+    "AvgCourse": 5.4,
+    "AvgInstructor": 5.6,
+    "Course": "4808",
+    "CourseTitle": "Special Topics in World Areas History",
+    "CrsLvlNum": "4XXX",
+    "CrsPBAColl": "AS",
+    "CrsPBADept": "HIST",
+    "CrsPBADiv": "AH",
+    "Honors": "0",
+    "Hours": 3,
+    "Instruction_Mode": "P  - In Person",
+    "Level": "Upper",
+    "NComb": 2,
+    "NIntrFCQ": 1,
+    "N": {
+      "ENROLL": 16,
+      "EOT": 16,
+      "GRADE": 16,
+      "INCOMP": 0,
+      "NOCRED": 0,
+      "PASS": 0,
+      "Ret": 15
+    },
+    "PCT": {
+      "A": 0.31,
+      "B": 0.5,
+      "C": 0.12,
+      "C_MINUS_OR_BELOW": 0.06,
+      "D": 0,
+      "DF": 0.06,
+      "F": 0.06,
+      "GRADE": 1,
+      "INCOMP": 0,
+      "WDRAW": 0
+    },
+    "RAP": "0",
+    "Section": "001",
+    "Subject": "HIST",
+    "Subject_Label": "History",
+    "Workload": {
+      "Hrs_Wk": "7-9",
+      "Raw": "3.40"
+    },
+    "YearTerm": "20137",
+    "Instructors": [
+      {
+        "group": "1 TTT",
+        "name": "MOJOLA, SANYU AMIMO",
+        "title": "ASST PROFESSOR"
+      },
+      {
+        "group": "1 TTT",
+        "name": "OSBORNE, MYLES GREGORY",
+        "title": "ASST PROFESSOR"
+      }
+    ]
+  },
+  {
+    "AVG_GRD": 3.25,
+    "Activity_Type": "LEC - Lecture",
+    "AvgCourse": 5.15,
+    "AvgInstructor": 5,
+    "Course": "4820",
+    "CourseTitle": "Human Rights: Historical Perspectives",
+    "CrsLvlNum": "4XXX",
+    "CrsPBAColl": "AS",
+    "CrsPBADept": "HIST",
+    "CrsPBADiv": "AH",
+    "Honors": "0",
+    "Hours": 3,
+    "Instruction_Mode": "P  - In Person",
+    "Level": "Upper",
+    "NComb": 1,
+    "NIntrFCQ": 1,
+    "N": {
+      "ENROLL": 30,
+      "EOT": 30,
+      "GRADE": 30,
+      "INCOMP": 0,
+      "NOCRED": 0,
+      "PASS": 0,
+      "Ret": 20
+    },
+    "PCT": {
+      "A": 0.5,
+      "B": 0.33,
+      "C": 0.13,
+      "C_MINUS_OR_BELOW": 0.03,
+      "D": 0.03,
+      "DF": 0.03,
+      "F": 0,
+      "GRADE": 1,
+      "INCOMP": 0,
+      "WDRAW": 0
+    },
+    "RAP": "0",
+    "Section": "002",
+    "Subject": "HIST",
+    "Subject_Label": "History",
+    "Workload": {
+      "Hrs_Wk": "7-9",
+      "Raw": "2.71"
+    },
+    "YearTerm": "20137",
+    "Instructors": [
+      {
+        "group": "1 TTT",
+        "name": "MUKHERJEE, MITHI",
+        "title": "ASSOCIATE PROFESSOR"
+      }
+    ]
+  },
+  {
+    "AVG_GRD": 3.84,
+    "Activity_Type": "SEM - Seminar",
+    "AvgCourse": 4.73,
+    "AvgInstructor": 4.91,
+    "Course": "5000",
+    "CourseTitle": "Historical Methods: Introduction to the Professional Study of History",
+    "CrsLvlNum": "5XXX",
+    "CrsPBAColl": "AS",
+    "CrsPBADept": "HIST",
+    "CrsPBADiv": "AH",
+    "Honors": "0",
+    "Hours": 3,
+    "Instruction_Mode": "P  - In Person",
+    "Level": "Masters",
+    "NComb": 1,
+    "NIntrFCQ": 1,
+    "N": {
+      "ENROLL": 13,
+      "EOT": 13,
+      "GRADE": 13,
+      "INCOMP": 0,
+      "NOCRED": 0,
+      "PASS": 0,
+      "Ret": 11
+    },
+    "PCT": {
+      "A": 1,
+      "B": 0,
+      "C": 0,
+      "C_MINUS_OR_BELOW": 0,
+      "D": 0,
+      "DF": 0,
+      "F": 0,
+      "GRADE": 1,
+      "INCOMP": 0,
+      "WDRAW": 0
+    },
+    "RAP": "1",
+    "Section": "801",
+    "Subject": "HIST",
+    "Subject_Label": "History",
+    "Workload": {
+      "Hrs_Wk": "10-12",
+      "Raw": "3.55"
+    },
+    "YearTerm": "20137",
+    "Instructors": [
+      {
+        "group": "1 TTT",
+        "name": "MUKHERJEE, MITHI",
+        "title": "ASSOCIATE PROFESSOR"
+      }
+    ]
+  },
+  {
+    "AVG_GRD": 3.9,
+    "Activity_Type": "SEM - Seminar",
+    "AvgCourse": 5.27,
+    "AvgInstructor": 5.36,
+    "Course": "6410",
+    "CourseTitle": "Readings in Environmental History",
+    "CrsLvlNum": "6XXX",
+    "CrsPBAColl": "AS",
+    "CrsPBADept": "HIST",
+    "CrsPBADiv": "AH",
+    "Honors": "0",
+    "Hours": 3,
+    "Instruction_Mode": "P  - In Person",
+    "Level": "Masters",
+    "NComb": 1,
+    "NIntrFCQ": 1,
+    "N": {
+      "ENROLL": 13,
+      "EOT": 13,
+      "GRADE": 13,
+      "INCOMP": 0,
+      "NOCRED": 0,
+      "PASS": 0,
+      "Ret": 11
+    },
+    "PCT": {
+      "A": 0.92,
+      "B": 0.08,
+      "C": 0,
+      "C_MINUS_OR_BELOW": 0,
+      "D": 0,
+      "DF": 0,
+      "F": 0,
+      "GRADE": 1,
+      "INCOMP": 0,
+      "WDRAW": 0
+    },
+    "RAP": "1",
+    "Section": "802",
+    "Subject": "HIST",
+    "Subject_Label": "History",
+    "Workload": {
+      "Hrs_Wk": "10-12",
+      "Raw": "4.36"
+    },
+    "YearTerm": "20137",
+    "Instructors": [
+      {
+        "group": "1 TTT",
+        "name": "SUTTER, PAUL SHRIVER",
+        "title": "ASSOCIATE PROFESSOR"
+      }
+    ]
+  },
+  {
+    "AVG_GRD": 3.8,
+    "Activity_Type": "SEM - Seminar",
+    "AvgCourse": 5.71,
+    "AvgInstructor": 5.93,
+    "Course": "7052",
+    "CourseTitle": "Seminar: Modern European History",
+    "CrsLvlNum": "7XXX",
+    "CrsPBAColl": "AS",
+    "CrsPBADept": "HIST",
+    "CrsPBADiv": "AH",
+    "Honors": "0",
+    "Hours": 3,
+    "Instruction_Mode": "P  - In Person",
+    "Level": "Doctoral",
+    "NComb": 1,
+    "NIntrFCQ": 1,
+    "N": {
+      "ENROLL": 14,
+      "EOT": 14,
+      "GRADE": 10,
+      "INCOMP": 4,
+      "NOCRED": 0,
+      "PASS": 0,
+      "Ret": 14
+    },
+    "PCT": {
+      "A": 0.8,
+      "B": 0.2,
+      "C": 0,
+      "C_MINUS_OR_BELOW": 0,
+      "D": 0,
+      "DF": 0,
+      "F": 0,
+      "GRADE": 0.71,
+      "INCOMP": 0.29,
+      "WDRAW": 0
+    },
+    "RAP": "1",
+    "Section": "801",
+    "Subject": "HIST",
+    "Subject_Label": "History",
+    "Workload": {
+      "Hrs_Wk": "10-12",
+      "Raw": "3.75"
+    },
+    "YearTerm": "20137",
+    "Instructors": [
+      {
+        "group": "1 TTT",
+        "name": "HANNA, MARTHA",
+        "title": "PROFESSOR"
+      }
+    ]
+  },
+  {
+    "AVG_GRD": 4,
+    "Activity_Type": "SEM - Seminar",
+    "AvgCourse": 5.67,
+    "AvgInstructor": 5.78,
+    "Course": "1001",
+    "CourseTitle": "Honors Coseminar",
+    "CrsLvlNum": "1XXX",
+    "CrsPBAColl": "AS",
+    "CrsPBADept": "HONR",
+    "CrsPBADiv": "SS",
+    "Honors": "1",
+    "Hours": 1,
+    "Instruction_Mode": "HN - Honors Thesis Courses",
+    "Level": "Lower",
+    "NComb": 1,
+    "NIntrFCQ": 1,
+    "N": {
+      "ENROLL": 14,
+      "EOT": 14,
+      "GRADE": 14,
+      "INCOMP": 0,
+      "NOCRED": 0,
+      "PASS": 0,
+      "Ret": 9
+    },
+    "PCT": {
+      "A": 1,
+      "B": 0,
+      "C": 0,
+      "C_MINUS_OR_BELOW": 0,
+      "D": 0,
+      "DF": 0,
+      "F": 0,
+      "GRADE": 1,
+      "INCOMP": 0,
+      "WDRAW": 0
+    },
+    "RAP": "0",
+    "Section": "880",
+    "Subject": "HONR",
+    "Subject_Label": "Honors",
+    "Workload": {
+      "Hrs_Wk": "0-3",
+      "Raw": "1.14"
+    },
+    "YearTerm": "20137",
+    "Instructors": [
+      {
+        "group": "1 TTT",
+        "name": "BREED, MICHAEL D",
+        "title": "PROFESSOR"
+      }
+    ]
+  },
+  {
+    "AVG_GRD": 3.21,
+    "Activity_Type": "SEM - Seminar",
+    "AvgCourse": 5.13,
+    "AvgInstructor": 5.5,
+    "Course": "1810",
+    "CourseTitle": "Honors Diversity Seminar",
+    "CrsLvlNum": "1XXX",
+    "CrsPBAColl": "AS",
+    "CrsPBADept": "HONR",
+    "CrsPBADiv": "SS",
+    "Honors": "1",
+    "Hours": 3,
+    "Instruction_Mode": "HN - Honors Thesis Courses",
+    "Level": "Lower",
+    "NComb": 1,
+    "NIntrFCQ": 1,
+    "N": {
+      "ENROLL": 12,
+      "EOT": 12,
+      "GRADE": 12,
+      "INCOMP": 0,
+      "NOCRED": 0,
+      "PASS": 0,
+      "Ret": 8
+    },
+    "PCT": {
+      "A": 0.83,
+      "B": 0,
+      "C": 0,
+      "C_MINUS_OR_BELOW": 0.17,
+      "D": 0,
+      "DF": 0.17,
+      "F": 0.17,
+      "GRADE": 1,
+      "INCOMP": 0,
+      "WDRAW": 0
+    },
+    "RAP": "0",
+    "Section": "880",
+    "Subject": "HONR",
+    "Subject_Label": "Honors",
+    "Workload": {
+      "Hrs_Wk": "7-9",
+      "Raw": "3.00"
+    },
+    "YearTerm": "20137",
+    "Instructors": [
+      {
+        "group": "3 Supp",
+        "name": "KEASLEY, ALPHONSE",
+        "title": "ASST VICE CHANCELLOR"
+      }
+    ]
+  },
+  {
+    "AVG_GRD": 3.76,
+    "Activity_Type": "LEC - Lecture",
+    "AvgCourse": 5.36,
+    "AvgInstructor": 5.73,
+    "Course": "2250",
+    "CourseTitle": "Ethics of Ambition",
+    "CrsLvlNum": "2XXX",
+    "CrsPBAColl": "AS",
+    "CrsPBADept": "HONR",
+    "CrsPBADiv": "SS",
+    "Honors": "1",
+    "Hours": 3,
+    "Instruction_Mode": "HN - Honors Thesis Courses",
+    "Level": "Lower",
+    "NComb": 1,
+    "NIntrFCQ": 1,
+    "N": {
+      "ENROLL": 16,
+      "EOT": 16,
+      "GRADE": 16,
+      "INCOMP": 0,
+      "NOCRED": 0,
+      "PASS": 0,
+      "Ret": 11
+    },
+    "PCT": {
+      "A": 0.81,
+      "B": 0.19,
+      "C": 0,
+      "C_MINUS_OR_BELOW": 0,
+      "D": 0,
+      "DF": 0,
+      "F": 0,
+      "GRADE": 1,
+      "INCOMP": 0,
+      "WDRAW": 0
+    },
+    "RAP": "0",
+    "Section": "880",
+    "Subject": "HONR",
+    "Subject_Label": "Honors",
+    "Workload": {
+      "Hrs_Wk": "4-6",
+      "Raw": "2.36"
+    },
+    "YearTerm": "20137",
+    "Instructors": [
+      {
+        "group": "2 Other reg",
+        "name": "STROM, PAUL",
+        "title": "SENIOR INSTRUCTOR"
+      }
+    ]
+  },
+  {
+    "AVG_GRD": 3.8,
+    "Activity_Type": "LEC - Lecture",
+    "Course": "2250",
+    "CourseTitle": "Ethics of Ambition",
+    "CrsLvlNum": "2XXX",
+    "CrsPBAColl": "AS",
+    "CrsPBADept": "HONR",
+    "CrsPBADiv": "SS",
+    "Honors": "1",
+    "Hours": 3,
+    "Instruction_Mode": "P  - In Person",
+    "Level": "Lower",
+    "NComb": 1,
+    "NIntrFCQ": "",
+    "N": {
+      "ENROLL": 17,
+      "EOT": 16,
+      "GRADE": 16,
+      "INCOMP": 0,
+      "NOCRED": 0,
+      "PASS": 0,
+      "Ret": ""
+    },
+    "PCT": {
+      "A": 0.88,
+      "B": 0.13,
+      "C": 0,
+      "C_MINUS_OR_BELOW": 0,
+      "D": 0,
+      "DF": 0,
+      "F": 0,
+      "GRADE": 1,
+      "INCOMP": 0,
+      "WDRAW": 0.06
+    },
+    "RAP": "0",
+    "Section": "888",
+    "Subject": "HONR",
+    "Subject_Label": "Honors",
+    "Workload": {
+      "Hrs_Wk": "",
+      "Raw": ""
+    },
+    "YearTerm": "20137",
+    "Instructors": [
+      {
+        "group": "2 Other reg",
+        "name": "STROM, PAUL",
+        "title": "SENIOR INSTRUCTOR"
+      }
+    ]
+  },
+  {
+    "AVG_GRD": 3.96,
+    "Activity_Type": "SEM - Seminar",
+    "AvgCourse": 5.08,
+    "AvgInstructor": 5.54,
+    "Course": "2251",
+    "CourseTitle": "Introduction to the Bible",
+    "CrsLvlNum": "2XXX",
+    "CrsPBAColl": "AS",
+    "CrsPBADept": "HONR",
+    "CrsPBADiv": "SS",
+    "Honors": "1",
+    "Hours": 3,
+    "Instruction_Mode": "HN - Honors Thesis Courses",
+    "Level": "Lower",
+    "NComb": 1,
+    "NIntrFCQ": 1,
+    "N": {
+      "ENROLL": 14,
+      "EOT": 14,
+      "GRADE": 14,
+      "INCOMP": 0,
+      "NOCRED": 0,
+      "PASS": 0,
+      "Ret": 13
+    },
+    "PCT": {
+      "A": 1,
+      "B": 0,
+      "C": 0,
+      "C_MINUS_OR_BELOW": 0,
+      "D": 0,
+      "DF": 0,
+      "F": 0,
+      "GRADE": 1,
+      "INCOMP": 0,
+      "WDRAW": 0
+    },
+    "RAP": "0",
+    "Section": "880",
+    "Subject": "HONR",
+    "Subject_Label": "Honors",
+    "Workload": {
+      "Hrs_Wk": "4-6",
+      "Raw": "1.73"
+    },
+    "YearTerm": "20137",
+    "Instructors": [
+      {
+        "group": "1 TTT",
+        "name": "KOPFF, E CHRISTIAN",
+        "title": "ASSOCIATE PROFESSOR"
+      }
+    ]
+  }
+]
