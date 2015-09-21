@@ -1,0 +1,16 @@
+Honors Coseminar	HONR	Honors	31
+Mathematics for Elem Eductrs 1	MATH	Mathematics	28
+Teaching Political Science 1	PSCI	Political Science	12
+Professional Issues in Clinical Psychology	PSYC	Psychology	19
+Professional Issues in Social Psychology	PSYC	Psychology	27
+Beginning Jazz with Experience	THDN	Theatre & Dance	23
+Research Methods and Ethics Seminar	CHEN	Chemical & Biological Engineering	19
+Seminar in Applied Mathematics	APPM	Applied Math	10
+Topics in Applied Mathematics	APPM	Applied Math	15
+Seminar in Planetary Science	APS	Astrophysical & Planetary Science	14
+Seminar: Introduction to EBIO Honors	EBIO	Ecology & Evolutionary Biology	18
+Introduction to the Bible	HONR	Honors	15
+Colloquium in Integrative Physiology	IPHY	Integrative Physiology	30
+Teaching Political Science 2	PSCI	Political Science	12
+Technique Practicum	THDN	Theatre & Dance	15
+Piano Class 1	MUSC	Music	11
