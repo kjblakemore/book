@@ -132,17 +132,17 @@ var grps = _.mapValues(titles, function(d) {
 return grps
 {% endlodash %}
 
-{% for dept, titles in result %}
-<p><b>{{dept}}</b></p>	
 <table>
+	{% for dept, titles in result %}
 	{% for title, count in titles %}
     <tr>
+    	<td>{{dept}}</td>
         <td>{{title}}</td>
         <td>{{count}}</td>
     </tr>
 	{% endfor %}
+	{% endfor %}
 </table>
-{% endfor %}
 
 ## What class has the highest GPA with the least amount of time spent each week? (by John)
 
@@ -151,16 +151,27 @@ return grps
 /* First, extract all courses with the easiest work load */
 var courses = _.groupBy(data, 'Workload.Hrs_Wk')['0-3']
 
-/* Then, find those which have a 4.0 grade, remove duplicates and sort. */
-return easy_As = _.unique(_.pluck(_.filter(courses, {'AVG_GRD': 4.0}), 'CourseTitle')).sort()
+/* Then, group by Course Title */
+var easy_courses = _.groupBy(_.filter(courses, {'AVG_GRD': 4.0}), 'CourseTitle')
+
+/* Finally, find the department and count number of students who received a grade */
+var easy_As = _.mapValues(easy_courses, function(d) {
+	var num = _.pluck(d, 'N.GRADE')
+	var dept = _.uniq(_.pluck(d, 'CrsPBADept'))
+	return [dept, _.sum(num)]
+})
+
+return(easy_As)
 
 {% endlodash %}
 
 <p><b>Easy A Courses</b></p>
 <table>
-{% for course in result %}
+{% for course, val in result %}
     <tr>
-        <td>{{course}}</td>
+    	<td>{{course}}</td>
+        <td>{{val[0]}}</td>
+        <td>{{val[1]}}</td>
     </tr>
 {% endfor %}
 </table>
