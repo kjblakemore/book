@@ -40,10 +40,9 @@ Picture of the repair cost.
 
 This question was asked by twagar95.
 
-![screenshot](screenshot.png)
+![screenshot](q4.png)
 
-(write your explanation for the reader as to where to look at this chart in order
-    to see the answer)
+The chart above shows the ranking of birdstrikes by aircraft make/model.
 
 # (Question 5)
 

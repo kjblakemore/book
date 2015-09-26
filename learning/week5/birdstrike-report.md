@@ -83,8 +83,29 @@ return most
 # Which airline incurs the most repair cost due to damage? by Mingqi Lew
 
 {% lodash %}
-return "[answer]"
+var group = _.groupBy(data, "Aircraft.Airline");
+var repair_sum = _.mapValues(group, function(n){
+
+   var repair = _.pluck(n, "Cost.Repair")
+   return _.sum(repair)
+})
+var max = _.max(repair_sum);
+
+var highest_repair =  _.pick(repair_sum, function(d){
+   return d == max;
+});
+
+return highest_repair 
+
 {% endlodash %}
+<table>
+{% for key, value in result %}
+    <tr>
+        <td>{{key}}</td>
+        <td>{{value}}</td>
+    </tr>
+{% endfor %}
+</table>
 
 # Which plane model strikes the most birds? by Matt Schroeder
 
