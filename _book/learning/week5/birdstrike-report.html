@@ -56,7 +56,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="1.6.1" data-basepath="../.." data-revision="Fri Sep 25 2015 21:58:55 GMT-0600 (MDT)">
+    <div class="book" data-level="1.6.1" data-basepath="../.." data-revision="Fri Sep 25 2015 22:46:56 GMT-0600 (MDT)">
     
 
 <div class="book-summary">
@@ -915,7 +915,28 @@ most = _.pick(incidents,function(n){
 return most</code></pre></p>
 <pre><code>The worse airport is DENVER INTL AIRPORT with 3397 incidents
 </code></pre><h1 id="which-airline-incurs-the-most-repair-cost-due-to-damage-by-mingqi-lew">Which airline incurs the most repair cost due to damage? by Mingqi Lew</h1>
-<p><pre><code>return &quot;[answer]&quot;</code></pre></p>
+<p><pre><code>var group = _.groupBy(data, &quot;Aircraft.Airline&quot;);
+var repair_sum = _.mapValues(group, function(n){
+
+   var repair = _.pluck(n, &quot;Cost.Repair&quot;)
+   return _.sum(repair)
+})
+var max = _.max(repair_sum);
+
+var highest_repair =  _.pick(repair_sum, function(d){
+   return d == max;
+});
+
+return highest_repair</code></pre></p>
+<table>
+
+    <tr>
+        <td>BUSINESS</td>
+        <td>54721</td>
+    </tr>
+
+</table>
+
 <h1 id="which-plane-model-strikes-the-most-birds-by-matt-schroeder">Which plane model strikes the most birds? by Matt Schroeder</h1>
 <p><pre><code>return &quot;[answer]&quot;</code></pre></p>
 <h1 id="-question-5-by-name">(Question 5) by (Name)</h1>
