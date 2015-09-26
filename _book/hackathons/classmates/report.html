@@ -29,6 +29,14 @@
         
     
         
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-bigdata/jquery.jsonview.css">
+        
+    
+        
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/default.min.css">
+        
+    
+        
         <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
         
     
@@ -48,7 +56,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="2.2.4" data-basepath="../.." data-revision="Sun Sep 20 2015 21:17:48 GMT-0600 (MDT)">
+    <div class="book" data-level="2.2.4" data-basepath="../.." data-revision="Fri Sep 25 2015 21:58:55 GMT-0600 (MDT)">
     
 
 <div class="book-summary">
@@ -379,6 +387,72 @@
             
         </li>
     
+        <li class="chapter " data-level="1.6" data-path="learning/week5/index.html">
+            
+                
+                    <a href="../../learning/week5/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        Week 5
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="learning/week5/birdstrike-report.html">
+            
+                
+                    <a href="../../learning/week5/birdstrike-report.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.1.</b>
+                        
+                        Birdstrike Report
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="learning/week5/viz-steps.html">
+            
+                
+                    <a href="../../learning/week5/viz-steps.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.2.</b>
+                        
+                        Viz Intro
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="learning/week5/viz-drills.html">
+            
+                
+                    <a href="../../learning/week5/viz-drills.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.3.</b>
+                        
+                        Viz Drills
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
             </ul>
             
@@ -583,6 +657,42 @@
             
         </li>
     
+        <li class="chapter " data-level="2.4" data-path="hackathons/birdstrikes/index.html">
+            
+                
+                    <a href="../../hackathons/birdstrikes/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Birdstrikes
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="hackathons/birdstrikes/report.html">
+            
+                
+                    <a href="../../hackathons/birdstrikes/report.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.1.</b>
+                        
+                        Report
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
             </ul>
             
@@ -698,63 +808,52 @@
 on the &quot;self-introduction&quot; data. Out of these questions, our team chose to tackle on
 the following:</p>
 <h1 id="what-percentage-of-students-are-in-the-cs-department">What percentage of students are in the CS department?</h1>
-<p><pre>
-<span class="keyword">var</span> LANGUAGES = [<span class="string">&apos;c&apos;</span>, <span class="string">&apos;python&apos;</span>, <span class="string">&apos;ruby&apos;</span>, <span class="string">&apos;haskell&apos;</span>, <span class="string">&apos;javascript&apos;</span>, <span class="string">&apos;java&apos;</span>, <span class="string">&apos;c++&apos;</span>, <span class="string">&apos;c#&apos;</span>, <span class="string">&apos;js&apos;</span>]
+<p><pre><code>var LANGUAGES = [&apos;c&apos;, &apos;python&apos;, &apos;ruby&apos;, &apos;haskell&apos;, &apos;javascript&apos;, &apos;java&apos;, &apos;c++&apos;, &apos;c#&apos;, &apos;js&apos;]
 
-<span class="comment">/* Parse comments to use later */</span>
-<span class="keyword">function</span> parse_comments(comments) {
-    <span class="keyword">var</span> uid = comments.user.login
-    <span class="keyword">var</span> created = comments.created_at
-    <span class="keyword">var</span> updated = Number(comments.updated_at &gt; comments.created_at)
-    <span class="keyword">var</span> lines = comments.body.split(<span class="string">&apos;\r\n&apos;</span>)
-    <span class="keyword">var</span> name = (lines[<span class="number">0</span>].split(<span class="string">&apos;:&apos;</span>))[<span class="number">1</span>]
-    <span class="keyword">var</span> major = (lines[<span class="number">1</span>].split(<span class="string">&apos;:&apos;</span>))[<span class="number">1</span>]
-    <span class="keyword">var</span> lang = (lines[<span class="number">2</span>].split(<span class="string">&apos;:&apos;</span>))[<span class="number">1</span>].toLowerCase().split(/\s|,/)	
-    lang = _.intersection((_.includes(lang, <span class="string">&apos;js&apos;</span>)? _.remove(lang, [<span class="string">&apos;js&apos;</span>]).concat(<span class="string">&apos;javascript&apos;</span>):lang), LANGUAGES)	
-    <span class="keyword">var</span> food = (lines[<span class="number">3</span>].split(<span class="string">&apos;:&apos;</span>))[<span class="number">1</span>].toLowerCase()
-    <span class="keyword">return</span> {<span class="string">&apos;Uid&apos;</span>: uid, <span class="string">&apos;Created&apos;</span>: created, <span class="string">&apos;Updated&apos;</span>: updated, <span class="string">&apos;Name&apos;</span>: name, <span class="string">&apos;Major&apos;</span>: major, <span class="string">&apos;Lang&apos;</span>: lang, <span class="string">&apos;Food&apos;</span>: food}
+/* Parse comments to use later */
+function parse_comments(comments) {
+	var uid = comments.user.login
+	var created = comments.created_at
+	var updated = Number(comments.updated_at &gt; comments.created_at)
+	var lines = comments.body.split(&apos;\r\n&apos;)
+	var name = (lines[0].split(&apos;:&apos;))[1]
+	var major = (lines[1].split(&apos;:&apos;))[1]
+	var lang = (lines[2].split(&apos;:&apos;))[1].toLowerCase().split(/\s|,/)	
+	lang = _.intersection((_.includes(lang, &apos;js&apos;)? _.remove(lang, [&apos;js&apos;]).concat(&apos;javascript&apos;):lang), LANGUAGES)	
+	var food = (lines[3].split(&apos;:&apos;))[1].toLowerCase()
+	return {&apos;Uid&apos;: uid, &apos;Created&apos;: created, &apos;Updated&apos;: updated, &apos;Name&apos;: name, &apos;Major&apos;: major, &apos;Lang&apos;: lang, &apos;Food&apos;: food}
 }
 
 data.students = (data.comments).map(parse_comments)
 
-<span class="keyword">var</span> cs_students = _.filter(data.students, <span class="keyword">function</span>(student) {
-    <span class="keyword">var</span> major = student.Major
-    <span class="keyword">return</span> major.indexOf(<span class="string">&apos;Computer Science&apos;</span>) != -<span class="number">1</span> || major.indexOf(<span class="string">&apos;CS&apos;</span>) != -<span class="number">1</span> || major.indexOf(<span class="string">&apos;CSCI&apos;</span>) != -<span class="number">1</span> || major.indexOf(<span class="string">&apos;cs&apos;</span>) != -<span class="number">1</span>
+var cs_students = _.filter(data.students, function(student) {
+	var major = student.Major
+	return major.indexOf(&apos;Computer Science&apos;) != -1 || major.indexOf(&apos;CS&apos;) != -1 || major.indexOf(&apos;CSCI&apos;) != -1 || major.indexOf(&apos;cs&apos;) != -1
 })
 
-<span class="keyword">return</span> cs_students.length / data.students.length
-
-</pre></p>
+return cs_students.length / data.students.length</code></pre></p>
 <p>The answer is 0.8076923076923077</p>
 <h1 id="what-are-the-favorite-languages">What are the favorite languages?</h1>
-<p><pre>
-<span class="keyword">var</span> languages = _.countBy(_.reduce(_.pluck(data.students, <span class="string">&apos;Lang&apos;</span>), <span class="keyword">function</span>(memo, lang) {
-  		<span class="keyword">return</span> memo.concat(lang)
-    })
+<p><pre><code>var languages = _.countBy(_.reduce(_.pluck(data.students, &apos;Lang&apos;), function(memo, lang) {
+  		return memo.concat(lang)
+	})
 )
 
-<span class="keyword">var</span> languages_sorted = _.keys(languages).sort(<span class="keyword">function</span>(a,b){<span class="keyword">return</span> languages[b]-languages[a]})
+var languages_sorted = _.keys(languages).sort(function(a,b){return languages[b]-languages[a]})
 
-<span class="keyword">return</span> [languages_sorted]
-</pre></p>
+return [languages_sorted]</code></pre></p>
 <p>The favorite languages in decreasing order of popularity are: python,c,java,javascript,c++,ruby,haskell,c#</p>
 <h1 id="how-many-students-commented-on-the-introduction-issue-before-the-first-class">How many students commented on the introduction issue before the first class.</h1>
-<p><pre>
-<span class="keyword">var</span> FIRST_CLASS_TIME = <span class="string">&quot;2015-08-24T10:00:00Z&quot;</span>
-<span class="keyword">var</span> early_comments = _.reduce(_.pluck(data.students, <span class="string">&apos;Created&apos;</span>), <span class="keyword">function</span>(memo, created) {
-    <span class="keyword">return</span> memo + Number(created &lt;= FIRST_CLASS_TIME)
-}, <span class="number">0</span>)
-<span class="keyword">return</span> [early_comments]
-</pre></p>
+<p><pre><code>var FIRST_CLASS_TIME = &quot;2015-08-24T10:00:00Z&quot;
+var early_comments = _.reduce(_.pluck(data.students, &apos;Created&apos;), function(memo, created) {
+	return memo + Number(created <= FIRST_CLASS_TIME)="" },="" 0)="" return="" [early_comments]<="" code=""></=></code></pre></p>
 <p>The answer is 7</p>
 <h1 id="how-many-students-updated-their-comments">How many students updated their comments.</h1>
-<p><pre>
-<span class="keyword">var</span> updaters = _.reduce(_.pluck(data.students, <span class="string">&apos;Updated&apos;</span>), <span class="keyword">function</span>(memo, updated) {
-    <span class="keyword">return</span> memo + updated
-}, <span class="number">0</span>)
+<p><pre><code>var updaters = _.reduce(_.pluck(data.students, &apos;Updated&apos;), function(memo, updated) {
+	return memo + updated
+}, 0)
 
-<span class="keyword">return</span> [updaters]
-</pre></p>
+return [updaters]</code></pre></p>
 <p>The answer is 2</p>
 
                     
@@ -776,6 +875,18 @@ data.students = (data.comments).map(parse_comments)
 
         
 <script src="../../gitbook/app.js"></script>
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-bigdata/bigdata.js"></script>
+    
+
+    
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-bigdata/jquery.jsonview.js"></script>
+    
 
     
     <script src="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>

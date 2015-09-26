@@ -29,6 +29,14 @@
         
     
         
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-bigdata/jquery.jsonview.css">
+        
+    
+        
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/default.min.css">
+        
+    
+        
         <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
         
     
@@ -48,7 +56,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="2.2.3" data-basepath="../.." data-revision="Sun Sep 20 2015 21:17:48 GMT-0600 (MDT)">
+    <div class="book" data-level="2.2.3" data-basepath="../.." data-revision="Fri Sep 25 2015 21:58:55 GMT-0600 (MDT)">
     
 
 <div class="book-summary">
@@ -379,6 +387,72 @@
             
         </li>
     
+        <li class="chapter " data-level="1.6" data-path="learning/week5/index.html">
+            
+                
+                    <a href="../../learning/week5/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        Week 5
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="learning/week5/birdstrike-report.html">
+            
+                
+                    <a href="../../learning/week5/birdstrike-report.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.1.</b>
+                        
+                        Birdstrike Report
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="learning/week5/viz-steps.html">
+            
+                
+                    <a href="../../learning/week5/viz-steps.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.2.</b>
+                        
+                        Viz Intro
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="learning/week5/viz-drills.html">
+            
+                
+                    <a href="../../learning/week5/viz-drills.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.3.</b>
+                        
+                        Viz Drills
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
             </ul>
             
@@ -583,6 +657,42 @@
             
         </li>
     
+        <li class="chapter " data-level="2.4" data-path="hackathons/birdstrikes/index.html">
+            
+                
+                    <a href="../../hackathons/birdstrikes/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Birdstrikes
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="hackathons/birdstrikes/report.html">
+            
+                
+                    <a href="../../hackathons/birdstrikes/report.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.1.</b>
+                        
+                        Report
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
             </ul>
             
@@ -696,65 +806,57 @@
                         <h1 id="analysis">Analysis</h1>
 <p>After completing the warmup exercises, your task is to do four more slightly challenging analyses.</p>
 <h2 id="how-many-students-like-sushi-as-their-favorite-food">How many students like sushi as their favorite food?</h2>
-<p><pre>
-<span class="keyword">var</span> LANGUAGES = [<span class="string">&apos;c&apos;</span>, <span class="string">&apos;python&apos;</span>, <span class="string">&apos;ruby&apos;</span>, <span class="string">&apos;haskell&apos;</span>, <span class="string">&apos;javascript&apos;</span>, <span class="string">&apos;java&apos;</span>, <span class="string">&apos;c++&apos;</span>, <span class="string">&apos;c#&apos;</span>, <span class="string">&apos;js&apos;</span>]
+<p><pre><code>var LANGUAGES = [&apos;c&apos;, &apos;python&apos;, &apos;ruby&apos;, &apos;haskell&apos;, &apos;javascript&apos;, &apos;java&apos;, &apos;c++&apos;, &apos;c#&apos;, &apos;js&apos;]
 
-<span class="comment">/* Parse comments to use later */</span>
-<span class="keyword">function</span> parse_comments(comments) {
-    <span class="keyword">var</span> uid = comments.user.login
-    <span class="keyword">var</span> lines = comments.body.split(<span class="string">&apos;\r\n&apos;</span>)
-    <span class="keyword">var</span> name = (lines[<span class="number">0</span>].split(<span class="string">&apos;:&apos;</span>))[<span class="number">1</span>]
-    <span class="keyword">var</span> major = (lines[<span class="number">1</span>].split(<span class="string">&apos;:&apos;</span>))[<span class="number">1</span>]
-    <span class="keyword">var</span> lang = (lines[<span class="number">2</span>].split(<span class="string">&apos;:&apos;</span>))[<span class="number">1</span>].toLowerCase().split(/\s|,/)	
-    lang = _.intersection((_.includes(lang, <span class="string">&apos;js&apos;</span>)? _.remove(lang, [<span class="string">&apos;js&apos;</span>]).concat(<span class="string">&apos;javascript&apos;</span>):lang), LANGUAGES)	
-    <span class="keyword">var</span> food = (lines[<span class="number">3</span>].split(<span class="string">&apos;:&apos;</span>))[<span class="number">1</span>].toLowerCase()
-    <span class="keyword">return</span> {<span class="string">&apos;Uid&apos;</span>: uid, <span class="string">&apos;Name&apos;</span>: name, <span class="string">&apos;Major&apos;</span>: major, <span class="string">&apos;Lang&apos;</span>: lang, <span class="string">&apos;Food&apos;</span>: food}
+/* Parse comments to use later */
+function parse_comments(comments) {
+	var uid = comments.user.login
+	var lines = comments.body.split(&apos;\r\n&apos;)
+	var name = (lines[0].split(&apos;:&apos;))[1]
+	var major = (lines[1].split(&apos;:&apos;))[1]
+	var lang = (lines[2].split(&apos;:&apos;))[1].toLowerCase().split(/\s|,/)	
+	lang = _.intersection((_.includes(lang, &apos;js&apos;)? _.remove(lang, [&apos;js&apos;]).concat(&apos;javascript&apos;):lang), LANGUAGES)	
+	var food = (lines[3].split(&apos;:&apos;))[1].toLowerCase()
+	return {&apos;Uid&apos;: uid, &apos;Name&apos;: name, &apos;Major&apos;: major, &apos;Lang&apos;: lang, &apos;Food&apos;: food}
 }
 
 data.students = (data.comments).map(parse_comments)
 
-<span class="keyword">var</span> sushi_lovers = _.reduce(_.pluck(data.students, <span class="string">&apos;Food&apos;</span>), <span class="keyword">function</span>(memo, food) {
-    <span class="keyword">return</span> memo + Number(food.indexOf(<span class="string">&apos;sushi&apos;</span>) != -<span class="number">1</span>)
-}, <span class="number">0</span>)
+var sushi_lovers = _.reduce(_.pluck(data.students, &apos;Food&apos;), function(memo, food) {
+	return memo + Number(food.indexOf(&apos;sushi&apos;) != -1)
+}, 0)
 
-<span class="keyword">return</span> [sushi_lovers]
-</pre>
+return [sushi_lovers]</code></pre>
 The answer is 5</p>
 <h2 id="who-are-the-students-liking-python-the-most">Who are the students liking Python the most?</h2>
-<p><pre>
-<span class="keyword">var</span> pythonistas = _.pluck(_.filter(data.students, 
-    <span class="keyword">function</span>(student) {
-  		<span class="keyword">return</span> _.includes(student.Lang, <span class="string">&apos;python&apos;</span>)
-    }), <span class="string">&apos;Name&apos;</span>)
+<p><pre><code>var pythonistas = _.pluck(_.filter(data.students, 
+	function(student) {
+  		return _.includes(student.Lang, &apos;python&apos;)
+	}), &apos;Name&apos;)
 
-<span class="keyword">return</span> [pythonistas]
-</pre>
+return [pythonistas]</code></pre>
 Their names are  William Farmer, Heather Witte, Zach Lamb, Zhili Yang, John Cronk, Denis Kazakov, Caleb Hsu, Karen Blakemore, Sanketh S Shetty, Andrey Shprengel.</p>
 <h1 id="are-there-more-javascript-lovers-or-java-lovers">Are there more Javascript lovers or Java lovers?</h1>
-<p><pre>
-<span class="keyword">var</span> java_fans = _.filter(data.students, <span class="keyword">function</span>(student){
-    <span class="keyword">return</span> _.includes(student.Lang, <span class="string">&apos;java&apos;</span>)
+<p><pre><code>var java_fans = _.filter(data.students, function(student){
+	return _.includes(student.Lang, &apos;java&apos;)
 })
 
-<span class="keyword">var</span> javascript_fans = _.filter(data.students, <span class="keyword">function</span>(student) {
-    <span class="keyword">return</span> _.includes(student.Lang, <span class="string">&apos;javascript&apos;</span>) || _.includes(student.Lang, <span class="string">&apos;js&apos;</span>)
+var javascript_fans = _.filter(data.students, function(student) {
+	return _.includes(student.Lang, &apos;javascript&apos;) || _.includes(student.Lang, &apos;js&apos;)
 })
 
-<span class="keyword">var</span> java_vs_js = (java_fans.length &gt; javascript_fans.length? <span class="string">&apos;Java&apos;</span>: <span class="string">&apos;Javascript&apos;</span>)
+var java_vs_js = (java_fans.length &gt; javascript_fans.length? &apos;Java&apos;: &apos;Javascript&apos;)
 
-<span class="keyword">return</span> [java_vs_js]
-</pre>
+return [java_vs_js]</code></pre>
 The answer is Java.</p>
 <h2 id="who-likes-the-same-food-as-kjblakemore">Who likes the same food as <code>kjblakemore</code>?</h2>
-<p><pre>
-<span class="keyword">var</span> names = _.filter(data.students, <span class="keyword">function</span>(student) {
-        <span class="keyword">return</span> student.food == _.result(_.find(data.students, <span class="keyword">function</span>(student) {
-  	<span class="keyword">return</span> student.Uid == <span class="string">&apos;kjblakemore&apos;</span>
-    }), <span class="string">&apos;Food&apos;</span>)
+<p><pre><code>var names = _.filter(data.students, function(student) {
+		return student.food == _.result(_.find(data.students, function(student) {
+  	return student.Uid == &apos;kjblakemore&apos;
+	}), &apos;Food&apos;)
 })
 
-<span class="keyword">return</span> [names]
-</pre>
+return [names]</code></pre>
 Their names are .</p>
 
                     
@@ -776,6 +878,18 @@ Their names are .</p>
 
         
 <script src="../../gitbook/app.js"></script>
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-bigdata/bigdata.js"></script>
+    
+
+    
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-bigdata/jquery.jsonview.js"></script>
+    
 
     
     <script src="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>

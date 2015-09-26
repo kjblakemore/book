@@ -29,6 +29,14 @@
         
     
         
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-bigdata/jquery.jsonview.css">
+        
+    
+        
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/default.min.css">
+        
+    
+        
         <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
         
     
@@ -36,6 +44,8 @@
 
         
     
+    
+    <link rel="next" href="../../hackathons/birdstrikes/index.html" />
     
     
     <link rel="prev" href="../../hackathons/fcq/warmup.html" />
@@ -46,7 +56,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="2.3.2" data-basepath="../.." data-revision="Sun Sep 20 2015 21:17:48 GMT-0600 (MDT)">
+    <div class="book" data-level="2.3.2" data-basepath="../.." data-revision="Fri Sep 25 2015 21:58:55 GMT-0600 (MDT)">
     
 
 <div class="book-summary">
@@ -377,6 +387,72 @@
             
         </li>
     
+        <li class="chapter " data-level="1.6" data-path="learning/week5/index.html">
+            
+                
+                    <a href="../../learning/week5/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        Week 5
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="learning/week5/birdstrike-report.html">
+            
+                
+                    <a href="../../learning/week5/birdstrike-report.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.1.</b>
+                        
+                        Birdstrike Report
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="learning/week5/viz-steps.html">
+            
+                
+                    <a href="../../learning/week5/viz-steps.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.2.</b>
+                        
+                        Viz Intro
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="learning/week5/viz-drills.html">
+            
+                
+                    <a href="../../learning/week5/viz-drills.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.3.</b>
+                        
+                        Viz Drills
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
             </ul>
             
@@ -581,6 +657,42 @@
             
         </li>
     
+        <li class="chapter " data-level="2.4" data-path="hackathons/birdstrikes/index.html">
+            
+                
+                    <a href="../../hackathons/birdstrikes/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Birdstrikes
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="hackathons/birdstrikes/report.html">
+            
+                
+                    <a href="../../hackathons/birdstrikes/report.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.1.</b>
+                        
+                        Report
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
             </ul>
             
@@ -697,62 +809,58 @@
 can ask based on the FCQ data. Out of these questions, our team chose to tackle on
 the following questions. Each member on our team is reponsible for one question</p>
 <h2 id="what-is-the-ranking-of-departments-within-the-college-of-engineering-applied-sciences-based-on-average-course-rating-and-average-instructor-rating-by-kevin">What is the ranking of Departments within the College of Engineering &amp; Applied Sciences, based on average course rating and average instructor rating? (by Kevin)</h2>
-<p><pre>
-
-<span class="comment">/* First filter by college, then group by department */</span>
-<span class="keyword">var</span> departments = 
+<p><pre><code>/* First filter by college, then group by department */
+var departments = 
 _.groupBy(
-    _.filter(data, {<span class="string">&apos;CrsPBAColl&apos;</span>: <span class="string">&apos;EN&apos;</span>}), 
-    <span class="string">&apos;CrsPBADept&apos;</span>)
+	_.filter(data, {&apos;CrsPBAColl&apos;: &apos;EN&apos;}), 
+	&apos;CrsPBADept&apos;)
 
-<span class="comment">/* Then collect course and instructor ratings for each depatment, ignoring null ratings. */</span>
-<span class="keyword">var</span> course_ratings = 
+/* Then collect course and instructor ratings for each depatment, ignoring null ratings. */
+var course_ratings = 
 _.mapValues(departments,
-    <span class="keyword">function</span>(d) {
-        <span class="keyword">return</span> _.filter(
-            _.pluck(d, <span class="string">&apos;AvgCourse&apos;</span>),
-            <span class="keyword">function</span>(rating) {<span class="keyword">return</span> rating != <span class="keyword">null</span>}
-        )
-    }
+	function(d) {
+		return _.filter(
+			_.pluck(d, &apos;AvgCourse&apos;),
+			function(rating) {return rating != null}
+		)
+	}
 )
-    
-<span class="keyword">var</span> instructor_ratings = 
+	
+var instructor_ratings = 
 _.mapValues(departments,
-    <span class="keyword">function</span>(d) {
-        <span class="keyword">return</span> _.filter(
-            _.pluck(d, <span class="string">&apos;AvgInstructor&apos;</span>),
-            <span class="keyword">function</span>(rating) {<span class="keyword">return</span> rating != <span class="keyword">null</span>}
-        )
-    }
+	function(d) {
+		return _.filter(
+			_.pluck(d, &apos;AvgInstructor&apos;),
+			function(rating) {return rating != null}
+		)
+	}
 )
 
-<span class="comment">/* Next, calculate average rating per department */</span>
-<span class="keyword">var</span> avg_course_ratings = 
+/* Next, calculate average rating per department */
+var avg_course_ratings = 
 _.mapValues(course_ratings, 
-    <span class="keyword">function</span>(c) {<span class="keyword">return</span> _.sum(c)/c.length}
+	function(c) {return _.sum(c)/c.length}
 )
-<span class="keyword">var</span> avg_instructor_ratings = 
+var avg_instructor_ratings = 
 _.mapValues(instructor_ratings, 
-    <span class="keyword">function</span>(c) {<span class="keyword">return</span> _.sum(c)/c.length}
+	function(c) {return _.sum(c)/c.length}
 )
 
-<span class="comment">/* Finally convert object to array type and sort by ratings */</span>
-<span class="keyword">var</span> sorted_avg_course_ratings =
+/* Finally convert object to array type and sort by ratings */
+var sorted_avg_course_ratings =
 _.sortByOrder(
-    _.pairs(avg_course_ratings),
-    <span class="keyword">function</span>(c) {<span class="keyword">return</span> c[<span class="number">1</span>]},
-    <span class="string">&apos;desc&apos;</span>
+	_.pairs(avg_course_ratings),
+	function(c) {return c[1]},
+	&apos;desc&apos;
 )		
-<span class="keyword">var</span> sorted_avg_instructor_ratings =
+var sorted_avg_instructor_ratings =
 _.sortByOrder(
-    _.pairs(avg_instructor_ratings),
-    <span class="keyword">function</span>(c) {<span class="keyword">return</span> c[<span class="number">1</span>]},
-    <span class="string">&apos;desc&apos;</span>
+	_.pairs(avg_instructor_ratings),
+	function(c) {return c[1]},
+	&apos;desc&apos;
 )	
 
-<span class="keyword">return</span> [sorted_avg_course_ratings, sorted_avg_instructor_ratings]
-
-</pre></p>
+return [sorted_avg_course_ratings, sorted_avg_instructor_ratings]</code></pre></p>
 <p></p><p><b>Average Course Ratings</b></p><p></p>
 <table>
 
@@ -874,19 +982,15 @@ _.sortByOrder(
 </table>
 
 <h2 id="how-does-retention-compare-across-departments-by-zach">How does retention compare across departments? (by Zach)</h2>
-<p><pre>
-
-<span class="comment">/* Group by department, then calculate the average withdrawel rate */</span>
-<span class="keyword">var</span> grps = _.groupBy(data, <span class="string">&apos;CrsPBADept&apos;</span>)
-<span class="keyword">var</span> result =_.mapValues(grps, <span class="keyword">function</span>(d){
-    <span class="keyword">return</span> _.sum(_.pluck(d, <span class="string">&apos;PCT.WDRAW&apos;</span>))/d.length
+<p><pre><code>/* Group by department, then calculate the average withdrawel rate */
+var grps = _.groupBy(data, &apos;CrsPBADept&apos;)
+var result =_.mapValues(grps, function(d){
+    return _.sum(_.pluck(d, &apos;PCT.WDRAW&apos;))/d.length
 })
 
-<span class="comment">/* Convert object to array and sort by withdrawal rate */</span>
-result = _.sortByOrder(_.pairs(result),<span class="keyword">function</span>(d){<span class="keyword">return</span> d[<span class="number">1</span>]},<span class="string">&apos;desc&apos;</span>)
-<span class="keyword">return</span> result
-
-</pre></p>
+/* Convert object to array and sort by withdrawal rate */
+result = _.sortByOrder(_.pairs(result),function(d){return d[1]},&apos;desc&apos;)
+return result</code></pre></p>
 <p></p><p><b>Average Course Withdrawal Rate</b></p><p></p>
 <table>
 
@@ -1214,22 +1318,20 @@ result = _.sortByOrder(_.pairs(result),<span class="keyword">function</span>(d){
 
 
 <h2 id="what-is-the-distribution-of-instructor-type-e-g-lecturer-assistant-professor-instructor-across-departments-by-karen">What is the distribution of instructor type (e.g., Lecturer, Assistant Professor, Instructor) across departments? (by Karen)</h2>
-<p><pre>
-<span class="comment">/* First group by department */</span>
-<span class="keyword">var</span> departments = _.groupBy(data, <span class="string">&apos;CrsPBADept&apos;</span>)
+<p><pre><code>/* First group by department */
+var departments = _.groupBy(data, &apos;CrsPBADept&apos;)
 
-<span class="comment">/* Then collect titles for all classes in each department */</span>
-<span class="keyword">var</span> titles = _.mapValues(departments, <span class="keyword">function</span>(d) {
-    <span class="keyword">return</span> _.pluck(_.flatten(_.pluck(d, <span class="string">&apos;Instructors&apos;</span>)), <span class="string">&apos;title&apos;</span>)
+/* Then collect titles for all classes in each department */
+var titles = _.mapValues(departments, function(d) {
+	return _.pluck(_.flatten(_.pluck(d, &apos;Instructors&apos;)), &apos;title&apos;)
 })
 
-<span class="comment">/* Finally, compute length for each title */</span>
-<span class="keyword">var</span> grps = _.mapValues(titles, <span class="keyword">function</span>(d) {
-    <span class="keyword">return</span> _.mapValues(_.groupBy(d, <span class="keyword">function</span>(title) {<span class="keyword">return</span> title}), <span class="string">&apos;length&apos;</span>)
+/* Finally, compute length for each title */
+var grps = _.mapValues(titles, function(d) {
+	return _.mapValues(_.groupBy(d, function(title) {return title}), &apos;length&apos;)
 })
 
-<span class="keyword">return</span> grps
-</pre></p>
+return grps</code></pre></p>
 <p></p><p><b>HIST</b></p>    <p></p>
 <table>
 
@@ -4197,15 +4299,11 @@ result = _.sortByOrder(_.pairs(result),<span class="keyword">function</span>(d){
 
 
 <h2 id="what-class-has-the-highest-gpa-with-the-least-amount-of-time-spent-each-week-by-john">What class has the highest GPA with the least amount of time spent each week? (by John)</h2>
-<p><pre>
+<p><pre><code>/* First, extract all courses with the easiest work load */
+var courses = _.groupBy(data, &apos;Workload.Hrs_Wk&apos;)[&apos;0-3&apos;]
 
-<span class="comment">/* First, extract all courses with the easiest work load */</span>
-<span class="keyword">var</span> courses = _.groupBy(data, <span class="string">&apos;Workload.Hrs_Wk&apos;</span>)[<span class="string">&apos;0-3&apos;</span>]
-
-<span class="comment">/* Then, find those which have a 4.0 grade, remove duplicates and sort. */</span>
-<span class="keyword">return</span> easy_As = _.unique(_.pluck(_.filter(courses, {<span class="string">&apos;AVG_GRD&apos;</span>: <span class="number">4.0</span>}), <span class="string">&apos;CourseTitle&apos;</span>)).sort()
-
-</pre></p>
+/* Then, find those which have a 4.0 grade, remove duplicates and sort. */
+return easy_As = _.unique(_.pluck(_.filter(courses, {&apos;AVG_GRD&apos;: 4.0}), &apos;CourseTitle&apos;)).sort()</code></pre></p>
 <p></p><p><b>Easy A Courses</b></p><p></p>
 <table>
 
@@ -4276,19 +4374,15 @@ result = _.sortByOrder(_.pairs(result),<span class="keyword">function</span>(d){
 </table>
 
 <h2 id="which-course-level-has-the-lowest-retention-by-andrew">Which course level has the lowest retention? (by Andrew)</h2>
-<p><pre>
-
-<span class="comment">/* Group by level, then calculate average course withdrawal rate for each level */</span>
-<span class="keyword">var</span> grps = _.groupBy(data, <span class="string">&apos;Level&apos;</span>)
-<span class="keyword">var</span> result =_.mapValues(grps, <span class="keyword">function</span>(d){
-    <span class="keyword">return</span> _.sum(_.pluck(d, <span class="string">&apos;PCT.WDRAW&apos;</span>))/d.length
+<p><pre><code>/* Group by level, then calculate average course withdrawal rate for each level */
+var grps = _.groupBy(data, &apos;Level&apos;)
+var result =_.mapValues(grps, function(d){
+    return _.sum(_.pluck(d, &apos;PCT.WDRAW&apos;))/d.length
 })
 
-<span class="comment">/* Convert object to array and sort by withdrawal rate */</span>
-result = _.sortByOrder(_.pairs(result),<span class="keyword">function</span>(d){<span class="keyword">return</span> d[<span class="number">1</span>]},<span class="string">&apos;desc&apos;</span>)
-<span class="keyword">return</span> result
-
-</pre></p>
+/* Convert object to array and sort by withdrawal rate */
+result = _.sortByOrder(_.pairs(result),function(d){return d[1]},&apos;desc&apos;)
+return result</code></pre></p>
 <p></p><p><b>Average Course Withdrawal Rate</b></p><p></p>
 <table>
 
@@ -4323,14 +4417,28 @@ result = _.sortByOrder(_.pairs(result),<span class="keyword">function</span>(d){
         </div>
 
         
-        <a href="../../hackathons/fcq/warmup.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Warmup"><i class="fa fa-angle-left"></i></a>
+        <a href="../../hackathons/fcq/warmup.html" class="navigation navigation-prev " aria-label="Previous page: Warmup"><i class="fa fa-angle-left"></i></a>
         
+        
+        <a href="../../hackathons/birdstrikes/index.html" class="navigation navigation-next " aria-label="Next page: Birdstrikes"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
 
         
 <script src="../../gitbook/app.js"></script>
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-bigdata/bigdata.js"></script>
+    
+
+    
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-bigdata/jquery.jsonview.js"></script>
+    
 
     
     <script src="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
