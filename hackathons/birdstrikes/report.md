@@ -6,42 +6,39 @@ bird strikes.
 # Authors
 
 This report is prepared by
-* [Full name](link to github account)
-* [Full name](link to github account)
-* [Full name](link to github account)
-* [Full name](link to github account)
-* [Full name](link to github account)
+* [Karen Blakemore](https://github.com/kjblakemore)
+* [Brian McKean](https://github.com/co-bri)
+* [Mingqi Lew](https://github.com/Malaokia)
+* [Matt Schroeder](https://github.com/mattschroeder97)
+* [Dian Ding](https://github.com/boanding)
 
-# (Question 1)
+# What airports have the most expensive average accident?
 
-This question was asked by (student's github id).
+This question was asked by willzfarmer.
 
-![screenshot](screenshot.png)
+![screenshot](q1.png)
 
-(write your explanation for the reader as to where to look at this chart in order
-    to see the answer)
+The leftmost barchart in orange shows the airports with the most expensive average.
 
-# (Question 2)
+# Which airport has the most bird hits?
 
-This question was asked by (student's github id).
+This question was asked by zhya215.
 
-![screenshot](screenshot.png)
+![screenshot](q2.png)
 
-(write your explanation for the reader as to where to look at this chart in order
-    to see the answer)
+The bubble are set by size showing Denver with most bird strike incident reports.
 
-# (Question 3)
+# Which airline incurs the most repair cost due to damage?
 
-This question was asked by (student's github id).
+This question was asked by sumi6109.
 
-![screenshot](screenshot.png)
+![screenshot](q3.png)
 
-(write your explanation for the reader as to where to look at this chart in order
-    to see the answer)
+Picture of the repair cost.
 
-# (Question 4)
+# Which plane model strikes the most birds?
 
-This question was asked by (student's github id).
+This question was asked by twagar95.
 
 ![screenshot](screenshot.png)
 
