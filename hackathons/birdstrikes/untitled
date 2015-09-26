@@ -1,0 +1,58 @@
+
+import csv
+import json
+
+with open('birdstrikes.csv', 'rb') as csvfile:
+	reader = csv.reader(csvfile, delimiter=',')
+		for row in reader:
+			birdstrikes[row] = {}
+			birdstrikes[row][Aircraft] = {}
+			birdstrikes[row][Airport] = {}
+			birdstrikes[row][Wildlife] = {}
+			birdstrikes[row][Effect] = {}
+			birdstrikes[row][Location] = {}
+			birdstrikes[row][Conditions] = {}
+			birdstrikes[row][Remains] = {}
+			birdstrikes[row][When] = {}
+			birdstrikes[row][Cost] = {}
+
+			birdstrikes[row][Aircraft][Type] = row[0]
+			birdstrikes[row][Airport][Name] = row[1]
+			birdstrikes[row][Altitude] = row[2]
+			birdstrikes[row][Aircraft][Make] = row[3]
+			birdstrikes[row][Wildlife][Number] = row[4]
+			birdstrikes[row][Effect][Impact] = row[5]
+			birdstrikes[row][Effect][Other] = row[6]
+			birdstrikes[row][Location][Nearby] = row[7]
+			birdstrikes[row][Aircraft][FlightNumber] = row[8]
+			birdstrikes[row][FlightDate] = row[9]
+			birdstrikes[row][RecordId] = row[10]
+			birdstrikes[row][Effect][Damage] = row[11]
+			birdstrikes[row][Location][Freeform] =row[12]
+			birdstrikes[row][Aircraft][Enginines] = row[13]
+			birdstrikes[row][Aircraft][Airline] = row[14]
+			birdstrikes[row][Origin] = row[15]
+			birdstrikes[row][FlightPhase] = row[16]
+			birdstrikes[row][Conditions][Precipitation] = row[17]
+			birdstrikes[row][Remains][Collected] = row[18]
+			birdstrikes[row][Remains][Smithsonian] = row[19]
+			birdstrikes[row][Remarks] = row[20]
+			birdstrikes[row][ReportedDate] = row[21]
+			birdstrikes[row][Wildlife][Size] = row[22]
+			birdstrikes[row][Conditions][Sky] = row[23]
+			birdstrikes[row][Wildlife][Species] = row[24]
+			birdstrikes[row][When][Time] = row[25]
+			birdstrikes[row][When][TimeofDay] = row[26]
+			birdstrikes[row][Warned] = row[27]
+			birdstrikes[row][Cost][TOS] = row[28]
+			birdstrikes[row][Cost][Other] = row[29]
+			birdstrikes[row][Cost][Repair] = row[30]
+			birdstrikes[row][Cost][Total] = row[31]
+			birdstrikes[row][MilesFromAirport] = row[32]
+			birdstrikes[row][FeetAboveGround] = row[33]
+			birdstrikes[row][Fatalities] = row[34]
+			birdstrikes[row][Injuries] = row[35]
+			birdstrikes[row][Speed] = row[36]
+
+with open('birdstrikes.json', 'w') as outfile:
+    json.dump(data, outfile)
