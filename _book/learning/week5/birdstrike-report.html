@@ -56,7 +56,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="1.6.1" data-basepath="../.." data-revision="Fri Sep 25 2015 22:52:11 GMT-0600 (MDT)">
+    <div class="book" data-level="1.6.1" data-basepath="../.." data-revision="Sun Sep 27 2015 10:53:39 GMT-0600 (MDT)">
     
 
 <div class="book-summary">
@@ -448,6 +448,21 @@
             
         </li>
     
+        <li class="chapter " data-level="1.6.4" data-path="learning/week5/viz-pokemon.html">
+            
+                
+                    <a href="../../learning/week5/viz-pokemon.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.4.</b>
+                        
+                        Viz Pokemon
+                    </a>
+            
+            
+        </li>
+    
 
             </ul>
             
@@ -815,33 +830,30 @@ Utilize <code>_.map</code>, <code>_.filter</code>, <code>_.group</code> ...etc. 
 will need to do it on your own, replacing the placeholder <code>birdstrike.json</code> with
 real data.</p>
 <h1 id="what-airports-have-the-most-expensive-average-accident-by-karen-blakemore">What airports have the most expensive average accident? by Karen Blakemore</h1>
-<p><pre><code>/* First group by airport */
+<p><pre><code>// First group by airport
 var airports = _.groupBy(data, &apos;Airport.Name&apos;)
 
-/* Then collect costs of birdhits */
+// Then collect costs of birdhits
 var costByAirport = _.mapValues(airports, function(d) {
-	return _.pluck(d, &apos;Cost.Total&apos;)
+    return _.pluck(d, &apos;Cost.Total&apos;)
 })
 
-/* Next, calculate averge cost for each airport */
+// Next, calculate averge cost for each airport
 var avgCostByAirport = _.mapValues(costByAirport, function(d) {
 	var nums = _.map(d, function(n) {
-		return _.parseInt(n.split(&apos;,&apos;).join(&apos;&apos;))
-	})
+        return _.parseInt(n.split(&apos;,&apos;).join(&apos;&apos;))})
 	return _.sum(nums)/nums.length
 })
 
-/* Finally, convert object to array type and sort by avg cost */
-var sortedAvgCostByAirport = _.sortByOrder(
-	_.pairs(avgCostByAirport),
-	function(d) {return d[1]},
-	&apos;desc&apos;
-)
+// Finally, convert object to array type and sort by avg cost
+var sortedAvgCostByAirport = 
+    _.sortByOrder(
+        _.pairs(avgCostByAirport),
+        function(d) {return d[1]},
+        &apos;desc&apos;)
 
-/* Just return top 10 */
-var topTenAvgCostByAirport = _.take(sortedAvgCostByAirport, 10)
-
-return topTenAvgCostByAirport</code></pre></p>
+// Just return top 10
+return _.take(sortedAvgCostByAirport, 10)</code></pre></p>
 <p></p><p><b>Top 10 Airports With Most Expensive Average Accident</b></p><p></p>
 <table>
 
@@ -905,7 +917,7 @@ return topTenAvgCostByAirport</code></pre></p>
 airports = _.groupBy(names, &apos;Airport.Name&apos;)
 
 var incidents  = _.mapValues(airports,function(n){
-        return  n.length
+    return  n.length
 })
 
 big = _.max(incidents)
