@@ -84,7 +84,7 @@ function computeX(d, i) {
 }
 
 function computeWidth(d, i) {
-    return i * 10 + 10
+    return {'Attack': d.Attack, 'Defend': d.Defense}
 }
 
 function computeY(d, i) {
@@ -92,7 +92,11 @@ function computeY(d, i) {
 }
 
 function computeColor(d, i) {
-    return 'red'
+    return {'Attack': 'red', 'Defend': 'blue'}
+}
+
+function computeLabel(d, i) {
+    return d.Name
 }
 
 var viz = _.map(data, function(d, i){
@@ -100,7 +104,8 @@ var viz = _.map(data, function(d, i){
                 x: computeX(d, i),
                 y: computeY(d, i),
                 width: computeWidth(d, i),
-                color: computeColor(d, i)
+                color: computeColor(d, i),
+                label: computeLabel(d, i)
             }
          })
 console.log(viz)
@@ -114,12 +119,20 @@ return result.join('\n')
 {% template %}
 <g transform="translate(120 ${d.y})">
     <rect
-         x="-${d.width}"
-         width="${d.width}"
+         x="-${d.width.Attack}"
+         width="${d.width.Attack}"
          height="20"
-         style="fill:${d.color};
+         style="fill:${d.color.Attack};
                 stroke-width:1;
                 stroke:rgb(0,0,0)" />
+    <rect
+         x=0
+         width="${d.width.Defend}"
+         height="20"
+         style="fill:${d.color.Defend};
+                stroke-width:1;
+                stroke:rgb(0,0,0)" />
+    <text transform="translate(0 15)">${d.label}</text>
 </g>
 
 {% output %}

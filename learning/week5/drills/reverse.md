@@ -29,7 +29,7 @@ function computeColor(d, i) {
     return 'red'
 }
 
-var viz = _.map(data, function(d, i){
+var viz = _.map(data.reverse(), function(d, i){
             return {
                 x: computeX(d, i),
                 y: computeY(d, i),

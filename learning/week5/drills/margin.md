@@ -14,15 +14,15 @@ Add some margins between every two bars
 {% solution %}
 
 function computeX(d, i) {
-    return i * 20
+    return i * 30
 }
 
 function computeHeight(d, i) {
-    return i * 20 + 100
+    return d.pop / (1393783836/400)
 }
 
 function computeY(d, i) {
-    return 400 - i * 20 - 100
+    return 400 - (d.pop / (1393783836/400))
 }
 
 function computeColor(d, i) {

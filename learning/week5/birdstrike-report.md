@@ -17,33 +17,30 @@ real data.
 # What airports have the most expensive average accident? by Karen Blakemore
 
 {% lodash %}
-/* First group by airport */
+// First group by airport
 var airports = _.groupBy(data, 'Airport.Name')
 
-/* Then collect costs of birdhits */
+// Then collect costs of birdhits
 var costByAirport = _.mapValues(airports, function(d) {
-	return _.pluck(d, 'Cost.Total')
+    return _.pluck(d, 'Cost.Total')
 })
 
-/* Next, calculate averge cost for each airport */
+// Next, calculate averge cost for each airport
 var avgCostByAirport = _.mapValues(costByAirport, function(d) {
 	var nums = _.map(d, function(n) {
-		return _.parseInt(n.split(',').join(''))
-	})
+        return _.parseInt(n.split(',').join(''))})
 	return _.sum(nums)/nums.length
 })
 
-/* Finally, convert object to array type and sort by avg cost */
-var sortedAvgCostByAirport = _.sortByOrder(
-	_.pairs(avgCostByAirport),
-	function(d) {return d[1]},
-	'desc'
-)
+// Finally, convert object to array type and sort by avg cost
+var sortedAvgCostByAirport = 
+    _.sortByOrder(
+        _.pairs(avgCostByAirport),
+        function(d) {return d[1]},
+        'desc')
 
-/* Just return top 10 */
-var topTenAvgCostByAirport = _.take(sortedAvgCostByAirport, 10)
-
-return topTenAvgCostByAirport
+// Just return top 10
+return _.take(sortedAvgCostByAirport, 10)
 {% endlodash %}
 
 <p><b>Top 10 Airports With Most Expensive Average Accident</b></p>
@@ -66,7 +63,7 @@ names = _.filter(data,function(n){
 airports = _.groupBy(names, 'Airport.Name')
 
 var incidents  = _.mapValues(airports,function(n){
-        return  n.length
+    return  n.length
 })
 
 big = _.max(incidents)
@@ -96,8 +93,8 @@ var highest_repair =  _.pick(repair_sum, function(d){
 });
 
 return highest_repair 
-
 {% endlodash %}
+
 <table>
 {% for key, value in result %}
     <tr>

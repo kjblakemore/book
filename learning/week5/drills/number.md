@@ -22,7 +22,7 @@ function computeHeight(d, i) {
 }
 
 function computeWidth(d, i) {
-    return 20 * i + 100
+    return d.pop * (300 / 1393783836)
 }
 
 function computeY(d, i) {
@@ -34,7 +34,7 @@ function computeColor(d, i) {
 }
 
 function computeLabel(d, i) {
-    return 'label'
+    return d.pop
 }
 
 var viz = _.map(data, function(d, i){
@@ -63,7 +63,7 @@ return result.join('\n')
      style="fill:${d.color};
             stroke-width:3;
             stroke:rgb(0,0,0)" />
-<text x="100" y="10">${d.label}</text>
+<text x="310" y="10">${d.label}</text>
 </g>
 
 {% output %}
@@ -74,7 +74,7 @@ return result.join('\n')
      style="fill:red;
             stroke-width:3;
             stroke:rgb(0,0,0)" />
-<text x="330" y="10">1393783836</text>
+<text x="310" y="10">1393783836</text>
 </g>
 <g transform="translate(0 20)">
 <rect width="272.79736274685854"
@@ -82,7 +82,7 @@ return result.join('\n')
      style="fill:red;
             stroke-width:3;
             stroke:rgb(0,0,0)" />
-<text x="330" y="10">1267401849</text>
+<text x="310" y="10">1267401849</text>
 </g>
 <g transform="translate(0 40)">
 <rect width="69.43322149418297"
@@ -90,7 +90,7 @@ return result.join('\n')
      style="fill:red;
             stroke-width:3;
             stroke:rgb(0,0,0)" />
-<text x="330" y="10">322583006</text>
+<text x="310" y="10">322583006</text>
 </g>
 <g transform="translate(0 60)">
 <rect width="54.415663993968145"
@@ -98,7 +98,7 @@ return result.join('\n')
      style="fill:red;
             stroke-width:3;
             stroke:rgb(0,0,0)" />
-<text x="330" y="10">252812243</text>
+<text x="310" y="10">252812243</text>
 </g>
 
 {% endvizexercise %}
