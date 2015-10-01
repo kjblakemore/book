@@ -50,6 +50,6 @@ During the statistics phase, we will select features of interest and calculate t
 
 ### Diff
 
-In the last step or our analysis, we consider how the number of units sold and average sales price change over time for the features of interest.
+In the last step of our analysis, we consider how the number of units sold and average sales price change over time for the features of interest.
 
 
