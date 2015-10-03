@@ -149,7 +149,7 @@ Hint: ensure that the results include apps that have creator address (not equal 
 
 {% mongoquery %}
 
-{"$and": [{"dct": {"$gte": 1000000}}, {"rate": {"$gt": 4.5}}, {"cadd": {"$ne": ""}}]}
+{"$and": [{"dct": {"$gt": 1000000}}, {"rate": {"$gt": 4.5}}, {"cadd": {"$ne": ""}}]}
 
 
 {% endmongoquery %}
