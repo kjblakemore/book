@@ -56,7 +56,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="1.7.3" data-basepath="../.." data-revision="Fri Oct 02 2015 14:55:56 GMT-0600 (MDT)">
+    <div class="book" data-level="1.7.3" data-basepath="../.." data-revision="Sat Oct 03 2015 14:55:20 GMT-0600 (MDT)">
     
 
 <div class="book-summary">
@@ -1602,139 +1602,47 @@ The star rating of the first Evernote app is: 4.6</p>
 
 <h2 id="10-find-the-title-and-address-of-the-creator-of-apps-with-download-count-greater-than-1-000-000-and-star-rating-greater-than-4-5">10- Find the title and address of the creator of apps with download count greater than 1,000,000 and star rating greater than 4.5?</h2>
 <p>Hint: ensure that the results include apps that have creator address (not equal &quot;&quot;)</p>
-<p><div class="mongodb"><h4>mongodb query</h4><pre><code>{&quot;$and&quot;: [{&quot;dct&quot;: {&quot;$gte&quot;: 1000000}}, {&quot;rate&quot;: {&quot;$gt&quot;: 4.5}}, {&quot;cadd&quot;: {&quot;$ne&quot;: &quot;&quot;}}]}</code></pre></div></p>
+<p><div class="mongodb"><h4>mongodb query</h4><pre><code>{&quot;$and&quot;: [{&quot;dct&quot;: {&quot;$gt&quot;: 1000000}}, {&quot;rate&quot;: {&quot;$gt&quot;: 4.5}}, {&quot;cadd&quot;: {&quot;$ne&quot;: &quot;&quot;}}]}</code></pre></div></p>
 <pre style="font-size:11px;line-height:1;max-height:300px;">[
  {
-  &quot;_id&quot;: &quot;56044569703498dd2a524c66&quot;,
-  &quot;cadd&quot;: &quot;TalkLittle, LLC\nPO Box 6842\nSan Mateo, CA 94403&quot;,
-  &quot;cat&quot;: &quot;News &amp; Magazines&quot;,
-  &quot;crat&quot;: &quot;Teen&quot;,
-  &quot;crt&quot;: &quot;TalkLittle&quot;,
-  &quot;curl&quot;: &quot;/store/apps/developer?id=TalkLittle&quot;,
-  &quot;dct&quot;: 1000000,
-  &quot;desc&quot;: &quot;Want early access to new features?  Use this beta opt-in link: https://play.google.com/apps/testing/com.andrewshu.android.reddit Use reddit.com with a decent interface. App icon designed by Carina Wang. Now includes TABLET support and WIDGET! And Moderator features! Cross-device HISTORY SYNC via synccit.com! Set it up in Menu-&gt;Settings-&gt;Synccit Permissions: &#x2022; INTERNET - The Internet &#x2022; BOOT - to restore mail notifications on device boot &#x2022; EXTERNAL STORAGE - thumbnail caching &#x2022; ACCESS_NETWORK_STATE - detect connection speed for OPTIONAL ads &#x2022; GET_ACCOUNTS - associate Google account with custom themes &#x2022; MANAGE_ACCOUNTS, AUTHENTICATE_ACCOUNTS, USE_CREDENTIALS - add reddit accounts to system Account Manager &#x2022; VIBRATE - for mail notifications &#x2022; NFC - share current page via NFC &#x2022; READ_SYNC_SETTINGS, WRITE_SYNC_SETTINGS - sync web preferences with reddit.com &#x2022; BILLING - purchase premium custom themes (but currently all themes are free) reddit and the reddit alien logo, trademark and trade dress are registered trademarks owned by reddit, Inc., and are used under license.&quot;,
-  &quot;dtp&quot;: &quot;September 20, 2015&quot;,
-  &quot;dtxt&quot;: &quot;1,000,000 - 5,000,000&quot;,
-  &quot;n&quot;: &quot;com.andrewshu.android.reddit&quot;,
-  &quot;new&quot;: &quot;3.7.15 (September 21): &#x2022; Fixed GIFV/Gfycat data usage on some devices 3.7.14 (September 18): &#x2022; Fixed memory leak &#x2022; Fixed FC &#x2022; Minor drawer tweak 3.7.13 (September 15): &#x2022; Disallow install to SD card because it forgets accounts &#x2022; Fixed reddit web preferences &#x2022; Fixed Gfycat bugs &#x2022; Fixed image loading bugs &#x2022; Fixed browser loading bug 3.7.9 (September 11): &#x2022; Major performance improvements &#x2022; Show gilding count on comments and posts &#x2022; Fixed background data &#x2022; Fixed cards themes&quot;,
-  &quot;os&quot;: &quot;Varies with device&quot;,
-  &quot;pri&quot;: &quot;Free&quot;,
-  &quot;purl&quot;: &quot;https://www.google.com/url?q=https://www.iubenda.com/privacy-policy/524179&amp;sa=D&amp;usg=AFQjCNFwiV-2d8toSgXSCzPizKyPf1lbpQ&quot;,
-  &quot;rate&quot;: 4.7,
-  &quot;rct&quot;: 304897,
-  &quot;sz&quot;: &quot;Varies with device&quot;,
-  &quot;t&quot;: &quot;reddit is fun&quot;,
-  &quot;verc&quot;: &quot;4324&quot;,
-  &quot;id&quot;: &quot;com.andrewshu.android.reddit-4324&quot;
- },
- {
-  &quot;_id&quot;: &quot;56044569703498dd2a524ca3&quot;,
-  &quot;cadd&quot;: &quot;16 Yonge Street, Suite 4002&quot;,
-  &quot;cat&quot;: &quot;Education&quot;,
+  &quot;_id&quot;: &quot;5604457c703498dd2a526263&quot;,
+  &quot;cadd&quot;: &quot;4880 Santa Rosa Rd\nCamarillo, CA 93012&quot;,
+  &quot;cat&quot;: &quot;Books &amp; Reference&quot;,
   &quot;crat&quot;: &quot;Everyone&quot;,
-  &quot;crt&quot;: &quot;Rad Lemur Kids Games&quot;,
-  &quot;curl&quot;: &quot;/store/apps/developer?id=Rad+Lemur+Kids+Games&quot;,
-  &quot;dct&quot;: 1000000,
-  &quot;desc&quot;: &quot;The easiest coloring book for your toddler. Select a color and fill away! Now with 8 backgrounds! This game is ad-free! User reviews: &#x2605;&#x2605;&#x2605;&#x2605;&#x2605; My toddler sits and plays this really well on her own and loves how easy it is to change colours and colouring pictures. &#x2605;&#x2605;&#x2605;&#x2605;&#x2605; &#x2605;&#x2605;&#x2605;&#x2605;&#x2605; My 2 year old loves this.. by far the best coloring app because it&apos;s not hard to color with just your finger...she is so proud to finish a page and loves the great color selection! &#x2605;&#x2605;&#x2605;&#x2605;&#x2605; &#x2605;&#x2605;&#x2605;&#x2605;&#x2605; This is an awesome coloring app both of my daughters, one 4yrs and the other 2yrs love using it. &#x2605;&#x2605;&#x2605;&#x2605;&#x2605; Pro version contains 58 coloring sheets! Ad-free - your little one will not see any ads! Now with option to unlock all coloring sheets by completing an offer from our sponsors. This section is protected by a toddler guard so your little one can&apos;t get there. Permissions are required for the offers and will not be used otherwise. Check out my other games for toddlers and preschool kids:  - Kids Animal Piano   - Kids Halloween Piano  - Kids Colors (Fireworks) - new!  - Toddler Fireworks  - Color Ripple for Toddlers  - Escape The Bee  - Toddler Smudge If you need a toddler lock for any of these games, download Toddler Central, a universal toddler lock! Note: this game has been primarily designed for toddlers, but it&apos;s equally great for your baby or infant and even for older kids.&quot;,
-  &quot;dtp&quot;: &quot;January 2, 2014&quot;,
-  &quot;dtxt&quot;: &quot;1,000,000 - 5,000,000&quot;,
-  &quot;n&quot;: &quot;com.androidcave.toddlercoloringbook.free&quot;,
-  &quot;new&quot;: &quot;This game is still ad-free! Your little one will see no ads! Read on! Added option to unlock all coloring sheets by completing an offer from our sponsors. This section is protected by a toddler guard so your little one can&apos;t get there. Permissions are required for the offers and will not be used otherwise.&quot;,
-  &quot;os&quot;: &quot;2.1 and up&quot;,
+  &quot;crt&quot;: &quot;Salem Web Network&quot;,
+  &quot;curl&quot;: &quot;/store/apps/developer?id=Salem+Web+Network&quot;,
+  &quot;dct&quot;: 5000000,
+  &quot;desc&quot;: &quot;DailyBible is the most liked Bible app on Android.  Daily Bible Verse  Daily Bible Reading Plan Easy &amp; Fast Search any Bible verse of topic. Daily Bible devotionals. Bible Index Supports many versions( NIV, KJV, ESV, etc.) Save or Share Bible verse or plan or devotions easily  on Facebook, Twitter, etc Home widget for daily Bible verse ------------------------------------ Daily Bible Verse :     - Start your day with a daily Bible verse. You will get automatic daily notification. You can read or just listen. Choose Bible verse in different versions like KJV, NIV, ESV, etc Daily Bible Reading Plan :    - Choose from a wide range of Bible reading plans and read Holy Bible. DailyBible can play back the reading plan. You can read or just listen. Easy &amp; Fast Search any Bible verse or topic:   - Easily search any verse of any topic. Search from a wide range of Bible Versions like KJV, ESV, NIV and lots more. Just speak to search. Daily Bible devotionals.   - Listen to a wide range of Biblical Christian Devotions. Choose from a huge list of devotional podcasts. Read or listen from devotions.    - Save a Bibe devotional podcast and listen to it offline - Bible Index    Read or Listen to any chapter from any book in Holy Bible easily. Supports multiple Bible versions like KJV, NIV, ESV, etc.    - Save or Share Bible verse or plan or devotions easily  on Facebook, Twitter, email, text etc. ----------------------- Permissions requested by DailyBible, how it is used and why it is needed ------------------------- 1) android.permission.INTERNET -  Needed to refresh daily Bible verse, daily Bible plans, devotions and searches. 2) android.permission.READ_PHONE_STATE -  To automatically stop the audio (devotions, daily verse, etc) playing if any, when an incoming call comes. 3) android.permission.WRITE_EXTERNAL_STORAGE -  To Save verse, plan and podcasts to external storage, when you choose to save it. 4) android.permission.WAKE_LOCK -  So that the audio can be played in background without stopping when phone goes to sleep. 5) android.permission.RECEIVE_BOOT_COMPLETED -  For refreshing daily verse after phone is rebooted. ---------------------------------------&quot;,
+  &quot;dtp&quot;: &quot;September 11, 2015&quot;,
+  &quot;dtxt&quot;: &quot;5,000,000 - 10,000,000&quot;,
+  &quot;n&quot;: &quot;joansoft.dailybible&quot;,
+  &quot;new&quot;: &quot;Updated DFS ads Bug fixing&quot;,
+  &quot;os&quot;: &quot;2.3 and up&quot;,
   &quot;pri&quot;: &quot;Free&quot;,
   &quot;purl&quot;: &quot;&quot;,
-  &quot;rate&quot;: 4.6,
-  &quot;rct&quot;: 44618,
-  &quot;sz&quot;: &quot;874k&quot;,
-  &quot;t&quot;: &quot;Toddler Coloring Book Free&quot;,
-  &quot;verc&quot;: &quot;8416&quot;,
-  &quot;id&quot;: &quot;com.androidcave.toddlercoloringbook.free-8416&quot;
+  &quot;rate&quot;: 4.7,
+  &quot;rct&quot;: 140431,
+  &quot;sz&quot;: &quot;3.9M&quot;,
+  &quot;t&quot;: &quot;Daily Bible&quot;,
+  &quot;verc&quot;: &quot;9646&quot;,
+  &quot;id&quot;: &quot;joansoft.dailybible-9646&quot;
  },
  {
-  &quot;_id&quot;: &quot;56044572703498dd2a5253d3&quot;,
-  &quot;cadd&quot;: &quot;2F., No.223, Shengli 6th St., Zhubei City, Hsinchu County 302, Taiwan (R.O.C.)&quot;,
-  &quot;cat&quot;: &quot;Finance&quot;,
+  &quot;_id&quot;: &quot;56044593703498dd2a528dfc&quot;,
+  &quot;cadd&quot;: &quot;Perth, Western Australia&quot;,
+  &quot;cat&quot;: &quot;Casual Action &amp; Adventure&quot;,
   &quot;crat&quot;: &quot;Everyone&quot;,
-  &quot;crt&quot;: &quot;CWMoney.net&quot;,
-  &quot;curl&quot;: &quot;/store/apps/developer?id=CWMoney.net&quot;,
-  &quot;dct&quot;: 1000000,
-  &quot;desc&quot;: &quot;&#x203B;&#x203B; Over 2,000,000 Users ,CWMoney is a Finance Management Software for Android,  This Free Version have almost full function, it&apos;s easy to record daily expense,income money, if you feel this free program help you,p</pre>
+  &quot;crt&quot;: &quot;Ezone.com&quot;,
+  &quot;curl&quot;: &quot;/store/apps/developer?id=Ezone.com&quot;,
+  &quot;dct&quot;: 5000000,
+  &quot;desc&quot;: &quot;Like platform games? Like running games? Well, you&apos;re gonna luv Diversion: 200+ levels, 7 Worlds, 700+ characters - one touch! Come and try a brand new game genre: the \&quot;Platform Runner\&quot;. A big thank you to the more than 5 million players who have downloaded and made Diversion so popular on Android!!! You guys rock!! Keep the great feedback coming - it really inspires us to keep the updates coming! - Challenging gameplay requires timing and puzzle solving - Cheat codes for in-game prizes: gem packs, characters, levels! - Daily Bonus! Earn gems and characters every day you play! - Boss battles! - 700+ fully-animated playable characters to unlock and collect - 200+ Levels - 7 Unique 3D Worlds - 3rd person camera: see all the action - Different every time you play! - Any gem or token pack purchase removes all in-game ads&#x2026; forever!!! - Built for NVIDIA Tegra with real-time shadows and physics powered by PhysX - Bluetooth controller support - New ways to earn free save tokens - Tablet support - Compete against your Google+ buddies! - Google Play Leaderboards - Google Play Achievements &#x2605;&#x2605; Hover World Preview level!!! Cruise around on your hover board collecting gems, or jump off and run around in this free roaming world. Check out  http://facebook.com/ezonecom  for details! &#x2605;&#x2605; Be amazed at what you can do : run, jump, climb, hang, swim, zip, slide, and even fly! As you progress through levels you&apos;ll unlock more challenging gameplay and hazards, including: spikes, chasms, zip-lines, slides, ledges, holes, buttons, spiderbots, bouncer bombs, water, laser walls, meteors, security drones, aliens, mutant sharks, chompers, stompers, lava, steam vents, blast vents, reversers, stoppers, portals, spike rollers, and more! 175 challenging levels will require timing and puzzle solving skills to complete and unlock hundreds of playable characters including: Ninja, Alien, Rocket, Karate, Robo, 60s, Zombie, Burglar, Tiger, Egyptian and even the Freaky Chicken and Future Banana! Will th</pre>
 
-<p>There are 28 apps.</p>
+<p>There are 17 apps.</p>
 <p></p><p><b>Title and Creator Address of Apps with High Ratings and Many Downloads</b></p><p></p>
 <table>
     <tr>
         <th>Title</th>
         <th>Address</th>
-    </tr>
-
-    <tr>
-        <td>com.andrewshu.android.reddit</td>
-        <td>TalkLittle, LLC
-PO Box 6842
-San Mateo, CA 94403</td>
-    </tr>
-
-    <tr>
-        <td>com.androidcave.toddlercoloringbook.free</td>
-        <td>16 Yonge Street, Suite 4002</td>
-    </tr>
-
-    <tr>
-        <td>com.lib.cwmoney</td>
-        <td>2F., No.223, Shengli 6th St., Zhubei City, Hsinchu County 302, Taiwan (R.O.C.)</td>
-    </tr>
-
-    <tr>
-        <td>com.namcobandaigames.spmoja010E</td>
-        <td>&#x6771;&#x4EAC;&#x90FD;&#x54C1;&#x5DDD;&#x533A;&#x6771;&#x54C1;&#x5DDD;4-5-15 &#x30D0;&#x30F3;&#x30C0;&#x30A4;&#x30CA;&#x30E0;&#x30B3;&#x672A;&#x6765;&#x7814;&#x7A76;&#x6240;</td>
-    </tr>
-
-    <tr>
-        <td>com.playagames.shakesfidget</td>
-        <td>Playa Games GmbH
-Alstertor 9
-20095 Hamburg</td>
-    </tr>
-
-    <tr>
-        <td>uk.co.roboticode.wordsofjesus</td>
-        <td>RobotiCode Ltd
-Office 4B,
-Britannia House,
-Penny Lane,
-Cowbridge,
-Vale of Glamorgan
-CF71 7EG
-UK</td>
-    </tr>
-
-    <tr>
-        <td>com.jumobile.manager.systemapp</td>
-        <td>PengXin, Room 209, Jockey Club House, City university of Hong Kong, 22 Cornwall Street, Kowloon Tong, Kowloon, HONG KONG</td>
-    </tr>
-
-    <tr>
-        <td>com.smtown.exo_fanclub.androidapp</td>
-        <td>&#xAC15;&#xB0A8;&#xAD6C; &#xC0BC;&#xC131;&#xB85C; 633 5F</td>
-    </tr>
-
-    <tr>
-        <td>com.gameloft.android.ANMP.GloftS2HM</td>
-        <td>Gameloft S.E
-14 rue Auber,
-75009 Paris,
-France</td>
-    </tr>
-
-    <tr>
-        <td>com.geargames.pfp</td>
-        <td>111024, Russia, Moscow, 2nd Entuziastov street, bld. 5/40, Gear Games, Ltd.</td>
-    </tr>
-
-    <tr>
-        <td>idv.nightgospel.TWRailScheduleLookUp</td>
-        <td>&#x9AD8;&#x96C4;&#x5E02;&#x4EC1;&#x6B66;&#x5340;&#x6F84;&#x5408;&#x8857;612&#x5DF7;19&#x865F;</td>
     </tr>
 
     <tr>
