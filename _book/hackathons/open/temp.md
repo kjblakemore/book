@@ -18,6 +18,18 @@ This report is prepared by
 
 {% title %}
 
+Which five countries have the most volcanoes? (by Matt)
+
+{% solution %}
+
+{% template %}
+
+{% endviz %}
+
+{% viz %}
+
+{% title %}
+
 What is the distribution of known eruptions? The chart shows eruptions every 1000 years from the current year through 9540 BCE. (by Karen)
 
 {% solution %}
@@ -89,3 +101,4 @@ return result.join('\n')
              stroke:rgb(0,0,0)" />
 
 {% endviz %}
+

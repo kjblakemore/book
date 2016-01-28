@@ -42,13 +42,4 @@ This question was asked by twagar95.
 
 ![screenshot](q4.png)
 
-The chart above shows the ranking of birdstrikes by aircraft make/model.
-
-# (Question 5)
-
-This question was asked by (student's github id).
-
-![screenshot](screenshot.png)
-
-(write your explanation for the reader as to where to look at this chart in order
-    to see the answer)    
+The chart above shows the ranking of birdstrikes by aircraft make/model.    
