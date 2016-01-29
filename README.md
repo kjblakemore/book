@@ -3,7 +3,7 @@ This repository contains the first 6 weeks of the HCC Big Data Course (CSCI-4830
 
 The course consisted of exploratory analysis of large data sets and visualiztions through interactive web applications.
 
-The format of the course was a weekly in-class team hackathon and take-home group and individual learning challenges.
+The format of the course was a weekly in-class team hackathon, followed by take-home team and individual learning challenges.
 
 ## Web Application
 The results of the hackathons and learning challenges for the first six weeks can be viewed at [gitbook](http://kjblakemore.github.io/book/).
@@ -11,6 +11,7 @@ The results of the hackathons and learning challenges for the first six weeks ca
 ## Technologies
 * JavaScript
 * Lodash
+* nunjuncks
 * SVG
 * Tableau
 * HTML & CSS
